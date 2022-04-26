@@ -94,7 +94,7 @@ public class SDplaceOrderofBroker1 extends Utils {
 		int statuscode = response.getStatusCode();
 		String code = Integer.toString(statuscode);
 		assertEquals(code, string);
-		System.out.println(response.asPrettyString());
+		System.out.println(response.asString());
 	}
 
 	@Then("Verify key {string} of response {string}")
