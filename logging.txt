@@ -1,0 +1,15 @@
+Request method:	DELETE
+Request URI:	https://k8s-consulsy-consulin-4b2a7ad400-346411955.ap-south-1.elb.amazonaws.com/api/v1/me/orders/
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		CSX-ACCESS-KEY=8bf9ff80fa1691087e8292ee9340509993f7ce91ec0b6ce207902e4b3ad11b88
+				CSX-SIGNATURE=a62c54312705a0e518223d92009b5da3af20e0cf395d9827b8b8697be7bffc2b
+				csx-access-timestamp=1650897888
+				Accept=application/json
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>

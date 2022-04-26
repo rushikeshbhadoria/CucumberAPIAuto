@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-04-25T13:30:56 IST" name="Default suite" finished-at="2022-04-25T13:31:19 IST" duration-ms="23619">
+    <groups>
+    </groups>
+    <test started-at="2022-04-25T13:30:56 IST" name="Default test" finished-at="2022-04-25T13:31:19 IST" duration-ms="23619">
+      <class name="cucumber.options.TestNGTestRunner">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:cucumber.options.TestNGTestRunner@33bc72d1]" started-at="2022-04-25T13:30:56 IST" name="setUp" finished-at="2022-04-25T13:30:56 IST" duration-ms="212" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumber.options.TestNGTestRunner@33bc72d1]" started-at="2022-04-25T13:30:56 IST" name="runScenario" data-provider="scenarios" finished-at="2022-04-25T13:31:19 IST" duration-ms="23136" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify GetBalance of diffrent broker"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[CSX Regression]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="destroy()[pri:0, instance:cucumber.options.TestNGTestRunner@33bc72d1]" started-at="2022-04-25T13:31:19 IST" name="destroy" finished-at="2022-04-25T13:31:19 IST" duration-ms="237" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- destroy -->
+      </class> <!-- cucumber.options.TestNGTestRunner -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
