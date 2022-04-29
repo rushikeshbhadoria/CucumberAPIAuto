@@ -1,18 +1,18 @@
 -------------------------------------------------------------------------------
 Test set: cucumber.options.TestRunner
 -------------------------------------------------------------------------------
-Tests run: 6, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 73.177 sec <<< FAILURE!
-runScenario(cucumber.options.TestRunner)  Time elapsed: 1.563 sec  <<< FAILURE!
+Tests run: 9, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 83.416 sec <<< FAILURE!
+runScenario(cucumber.options.TestRunner)  Time elapsed: 1.769 sec  <<< FAILURE!
 org.junit.ComparisonFailure: expected:<[405]> but was:<[200]>
 	at org.junit.Assert.assertEquals(Assert.java:117)
 	at org.junit.Assert.assertEquals(Assert.java:146)
-	at stepDefinations.SDplaceOrderofBroker1.i_verify_the_in_step(SDplaceOrderofBroker1.java:96)
+	at stepDefinations.SDplaceOrderofBroker1.i_verify_the_in_step(SDplaceOrderofBroker1.java:97)
 	at ?.I verify the  "200" in step(file:///C:/Users/Dell/eclipse_csk/CSXautomation2/src/test/java/feature/placeOrder.feature:100)
 
-runScenario(cucumber.options.TestRunner)  Time elapsed: 0.447 sec  <<< FAILURE!
+runScenario(cucumber.options.TestRunner)  Time elapsed: 0.494 sec  <<< FAILURE!
 org.junit.ComparisonFailure: expected:<[5]00> but was:<[2]00>
 	at org.junit.Assert.assertEquals(Assert.java:117)
 	at org.junit.Assert.assertEquals(Assert.java:146)
-	at stepDefinations.SDplaceOrderofBroker1.i_verify_the_in_step(SDplaceOrderofBroker1.java:96)
+	at stepDefinations.SDplaceOrderofBroker1.i_verify_the_in_step(SDplaceOrderofBroker1.java:97)
 	at ?.I verify the  "200" in step(file:///C:/Users/Dell/eclipse_csk/CSXautomation2/src/test/java/feature/placeOrder.feature:107)
 

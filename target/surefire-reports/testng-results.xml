@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="6" passed="4" failed="2" skipped="0">
+<testng-results ignored="0" total="9" passed="7" failed="2" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-04-26T10:31:12 IST" name="cucumber.options.TestRunner" finished-at="2022-04-26T10:32:24 IST" duration-ms="72209">
+  <suite started-at="2022-04-26T17:39:18 IST" name="cucumber.options.TestRunner" finished-at="2022-04-26T17:40:41 IST" duration-ms="82841">
     <groups>
     </groups>
-    <test started-at="2022-04-26T10:31:12 IST" name="Command line test" finished-at="2022-04-26T10:32:24 IST" duration-ms="72209">
+    <test started-at="2022-04-26T17:39:18 IST" name="Command line test" finished-at="2022-04-26T17:40:41 IST" duration-ms="82841">
       <class name="cucumber.options.TestRunner">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:cucumber.options.TestRunner@236e3f4e]" started-at="2022-04-26T10:31:12 IST" name="setUp" finished-at="2022-04-26T10:31:13 IST" duration-ms="437" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:cucumber.options.TestRunner@236e3f4e]" started-at="2022-04-26T17:39:18 IST" name="setUp" finished-at="2022-04-26T17:39:19 IST" duration-ms="282" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumber.options.TestRunner@236e3f4e]" started-at="2022-04-26T10:31:13 IST" name="runScenario" data-provider="scenarios" finished-at="2022-04-26T10:31:36 IST" duration-ms="22907" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumber.options.TestRunner@236e3f4e]" started-at="2022-04-26T17:39:19 IST" name="runScenario" data-provider="scenarios" finished-at="2022-04-26T17:39:43 IST" duration-ms="24386" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -27,7 +27,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumber.options.TestRunner@236e3f4e]" started-at="2022-04-26T10:31:36 IST" name="runScenario" data-provider="scenarios" finished-at="2022-04-26T10:31:59 IST" duration-ms="23479" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumber.options.TestRunner@236e3f4e]" started-at="2022-04-26T17:39:43 IST" name="runScenario" data-provider="scenarios" finished-at="2022-04-26T17:40:11 IST" duration-ms="27666" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -43,7 +43,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumber.options.TestRunner@236e3f4e]" started-at="2022-04-26T10:31:59 IST" name="runScenario" data-provider="scenarios" finished-at="2022-04-26T10:32:12 IST" duration-ms="12390" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumber.options.TestRunner@236e3f4e]" started-at="2022-04-26T17:40:11 IST" name="runScenario" data-provider="scenarios" finished-at="2022-04-26T17:40:28 IST" duration-ms="17636" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -59,7 +59,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumber.options.TestRunner@236e3f4e]" started-at="2022-04-26T10:32:12 IST" name="runScenario" data-provider="scenarios" finished-at="2022-04-26T10:32:22 IST" duration-ms="10378" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumber.options.TestRunner@236e3f4e]" started-at="2022-04-26T17:40:28 IST" name="runScenario" data-provider="scenarios" finished-at="2022-04-26T17:40:37 IST" duration-ms="8688" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -75,7 +75,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumber.options.TestRunner@236e3f4e]" started-at="2022-04-26T10:32:22 IST" name="runScenario" data-provider="scenarios" finished-at="2022-04-26T10:32:23 IST" duration-ms="1560" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumber.options.TestRunner@236e3f4e]" started-at="2022-04-26T17:40:37 IST" name="runScenario" data-provider="scenarios" finished-at="2022-04-26T17:40:39 IST" duration-ms="1767" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -96,7 +96,7 @@
               <![CDATA[org.junit.ComparisonFailure: expected:<[405]> but was:<[200]>
 at org.junit.Assert.assertEquals(Assert.java:117)
 at org.junit.Assert.assertEquals(Assert.java:146)
-at stepDefinations.SDplaceOrderofBroker1.i_verify_the_in_step(SDplaceOrderofBroker1.java:96)
+at stepDefinations.SDplaceOrderofBroker1.i_verify_the_in_step(SDplaceOrderofBroker1.java:97)
 at ✽.I verify the  "200" in step(file:///C:/Users/Dell/eclipse_csk/CSXautomation2/src/test/java/feature/placeOrder.feature:100)
 ]]>
             </full-stacktrace>
@@ -104,7 +104,7 @@ at ✽.I verify the  "200" in step(file:///C:/Users/Dell/eclipse_csk/CSXautomati
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumber.options.TestRunner@236e3f4e]" started-at="2022-04-26T10:32:23 IST" name="runScenario" data-provider="scenarios" finished-at="2022-04-26T10:32:24 IST" duration-ms="449" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumber.options.TestRunner@236e3f4e]" started-at="2022-04-26T17:40:39 IST" name="runScenario" data-provider="scenarios" finished-at="2022-04-26T17:40:39 IST" duration-ms="495" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -125,7 +125,7 @@ at ✽.I verify the  "200" in step(file:///C:/Users/Dell/eclipse_csk/CSXautomati
               <![CDATA[org.junit.ComparisonFailure: expected:<[5]00> but was:<[2]00>
 at org.junit.Assert.assertEquals(Assert.java:117)
 at org.junit.Assert.assertEquals(Assert.java:146)
-at stepDefinations.SDplaceOrderofBroker1.i_verify_the_in_step(SDplaceOrderofBroker1.java:96)
+at stepDefinations.SDplaceOrderofBroker1.i_verify_the_in_step(SDplaceOrderofBroker1.java:97)
 at ✽.I verify the  "200" in step(file:///C:/Users/Dell/eclipse_csk/CSXautomation2/src/test/java/feature/placeOrder.feature:107)
 ]]>
             </full-stacktrace>
@@ -133,7 +133,55 @@ at ✽.I verify the  "200" in step(file:///C:/Users/Dell/eclipse_csk/CSXautomati
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="destroy()[pri:0, instance:cucumber.options.TestRunner@236e3f4e]" started-at="2022-04-26T10:32:24 IST" name="destroy" finished-at="2022-04-26T10:32:24 IST" duration-ms="417" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumber.options.TestRunner@236e3f4e]" started-at="2022-04-26T17:40:39 IST" name="runScenario" data-provider="scenarios" finished-at="2022-04-26T17:40:40 IST" duration-ms="533" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify GetAllOrder"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[CSX Regression]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumber.options.TestRunner@236e3f4e]" started-at="2022-04-26T17:40:40 IST" name="runScenario" data-provider="scenarios" finished-at="2022-04-26T17:40:40 IST" duration-ms="537" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify GetAllOrder"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[CSX Regression]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumber.options.TestRunner@236e3f4e]" started-at="2022-04-26T17:40:40 IST" name="runScenario" data-provider="scenarios" finished-at="2022-04-26T17:40:41 IST" duration-ms="400" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify GetAllIps"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[CSX Regression]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="destroy()[pri:0, instance:cucumber.options.TestRunner@236e3f4e]" started-at="2022-04-26T17:40:41 IST" name="destroy" finished-at="2022-04-26T17:40:41 IST" duration-ms="412" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- destroy -->

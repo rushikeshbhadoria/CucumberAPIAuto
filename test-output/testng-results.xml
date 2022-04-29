@@ -1,17 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-04-25T13:30:56 IST" name="Default suite" finished-at="2022-04-25T13:31:19 IST" duration-ms="23619">
+  <suite started-at="2022-04-28T13:38:18 IST" name="Default suite" finished-at="2022-04-28T13:38:49 IST" duration-ms="31290">
     <groups>
     </groups>
-    <test started-at="2022-04-25T13:30:56 IST" name="Default test" finished-at="2022-04-25T13:31:19 IST" duration-ms="23619">
-      <class name="cucumber.options.TestNGTestRunner">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:cucumber.options.TestNGTestRunner@33bc72d1]" started-at="2022-04-25T13:30:56 IST" name="setUp" finished-at="2022-04-25T13:30:56 IST" duration-ms="212" status="PASS">
+    <test started-at="2022-04-28T13:38:18 IST" name="Default test" finished-at="2022-04-28T13:38:49 IST" duration-ms="31290">
+      <class name="cucumber.options.TestRunner">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:cucumber.options.TestRunner@33bc72d1]" started-at="2022-04-28T13:38:18 IST" name="setUp" finished-at="2022-04-28T13:38:18 IST" duration-ms="359" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumber.options.TestNGTestRunner@33bc72d1]" started-at="2022-04-25T13:30:56 IST" name="runScenario" data-provider="scenarios" finished-at="2022-04-25T13:31:19 IST" duration-ms="23136" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumber.options.TestRunner@33bc72d1]" started-at="2022-04-28T13:38:18 IST" name="runScenario" data-provider="scenarios" finished-at="2022-04-28T13:38:30 IST" duration-ms="11791" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify GetBalance"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[CSX Regression]"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.junit.ComparisonFailure">
+            <message>
+              <![CDATA[expected:<[FULFILLED]> but was:<[OPEN]>]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.junit.ComparisonFailure: expected:<[FULFILLED]> but was:<[OPEN]>
+at org.junit.Assert.assertEquals(Assert.java:117)
+at org.junit.Assert.assertEquals(Assert.java:146)
+at stepDefinations.SDplaceOrderofBroker1.verify_key_of_response(SDplaceOrderofBroker1.java:105)
+at ✽.Verify key "data.status" of response "OPEN"(file:///C:/Users/Dell/eclipse_csk/CSXautomation2/src/test/java/demoFeature/demo.feature:12)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.junit.ComparisonFailure -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumber.options.TestRunner@33bc72d1]" started-at="2022-04-28T13:38:30 IST" name="runScenario" data-provider="scenarios" finished-at="2022-04-28T13:38:49 IST" duration-ms="18639" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -27,11 +56,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="destroy()[pri:0, instance:cucumber.options.TestNGTestRunner@33bc72d1]" started-at="2022-04-25T13:31:19 IST" name="destroy" finished-at="2022-04-25T13:31:19 IST" duration-ms="237" status="PASS">
+        <test-method is-config="true" signature="destroy()[pri:0, instance:cucumber.options.TestRunner@33bc72d1]" started-at="2022-04-28T13:38:49 IST" name="destroy" finished-at="2022-04-28T13:38:49 IST" duration-ms="444" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- destroy -->
-      </class> <!-- cucumber.options.TestNGTestRunner -->
+      </class> <!-- cucumber.options.TestRunner -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

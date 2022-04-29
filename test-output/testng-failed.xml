@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="cucumber.options.TestNGTestRunner">
+      <class name="cucumber.options.TestRunner">
         <methods>
-          <include name="destroy"/>
-          <include name="runScenario" invocation-numbers="0"/>
           <include name="setUp"/>
+          <include name="runScenario" invocation-numbers="0"/>
+          <include name="destroy"/>
         </methods>
-      </class> <!-- cucumber.options.TestNGTestRunner -->
+      </class> <!-- cucumber.options.TestRunner -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

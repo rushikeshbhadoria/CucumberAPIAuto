@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="6" failures="2" name="cucumber.options.TestRunner" time="71.162" errors="0" skipped="0">
+<testsuite tests="9" failures="2" name="cucumber.options.TestRunner" time="82.11" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="java.vm.version" value="17.0.1+12"/>
@@ -25,7 +25,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="user.variant" value=""/>
     <property name="os.name" value="Windows 10"/>
-    <property name="classworlds.conf" value="C:\Users\Dell\eclipse_csk\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf7829957486300943067.tmp"/>
+    <property name="classworlds.conf" value="C:\Users\Dell\eclipse_csk\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf5354083640217564099.tmp"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
     <property name="java.library.path" value="C:\Users\Dell\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.1.v20211116-1657\jre\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/Users/Dell/.p2/pool/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.1.v20211116-1657/jre/bin/server;C:/Users/Dell/.p2/pool/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.1.v20211116-1657/jre/bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\Go\bin;C:\Program Files\Git\cmd;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Program Files\Java\jdk1.8.0_202\bin;C:\Program Files\Go\bin;C:\Program Files\apache-maven-3.8.5\bin;C:\Users\Dell\AppData\Local\Programs\Python\Python310\Scripts\;C:\Users\Dell\AppData\Local\Programs\Python\Python310\;C:\Users\Dell\AppData\Local\Microsoft\WindowsApps;C:\Users\Dell\go\bin;C:\Users\Dell\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\PostgreSQL\14\bin;;C:\Windows\System32;;."/>
     <property name="jdk.debug" value="release"/>
@@ -58,15 +58,15 @@
     <property name="java.vendor.version" value="Temurin-17.0.1+12"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="cucumber.options.TestRunner" name="runScenario" time="22.908"/>
-  <testcase classname="cucumber.options.TestRunner" name="runScenario" time="23.475"/>
-  <testcase classname="cucumber.options.TestRunner" name="runScenario" time="12.39"/>
-  <testcase classname="cucumber.options.TestRunner" name="runScenario" time="10.379"/>
-  <testcase classname="cucumber.options.TestRunner" name="runScenario" time="1.563">
+  <testcase classname="cucumber.options.TestRunner" name="runScenario" time="24.39"/>
+  <testcase classname="cucumber.options.TestRunner" name="runScenario" time="27.664"/>
+  <testcase classname="cucumber.options.TestRunner" name="runScenario" time="17.636"/>
+  <testcase classname="cucumber.options.TestRunner" name="runScenario" time="8.688"/>
+  <testcase classname="cucumber.options.TestRunner" name="runScenario" time="1.769">
     <failure message="expected:&lt;[405]&gt; but was:&lt;[200]&gt;" type="org.junit.ComparisonFailure">org.junit.ComparisonFailure: expected:&lt;[405]&gt; but was:&lt;[200]&gt;
 	at org.junit.Assert.assertEquals(Assert.java:117)
 	at org.junit.Assert.assertEquals(Assert.java:146)
-	at stepDefinations.SDplaceOrderofBroker1.i_verify_the_in_step(SDplaceOrderofBroker1.java:96)
+	at stepDefinations.SDplaceOrderofBroker1.i_verify_the_in_step(SDplaceOrderofBroker1.java:97)
 	at ✽.I verify the  &quot;200&quot; in step(file:///C:/Users/Dell/eclipse_csk/CSXautomation2/src/test/java/feature/placeOrder.feature:100)
 </failure>
     <system-out>
@@ -83,34 +83,37 @@ Scenario: Verify Add IP and delete IP                            &amp;#27;[90m# 
       &amp;#27;[31morg.junit.ComparisonFailure: expected:&lt;[405]&gt; but was:&lt;[200]&gt;
 	at org.junit.Assert.assertEquals(Assert.java:117)
 	at org.junit.Assert.assertEquals(Assert.java:146)
-	at stepDefinations.SDplaceOrderofBroker1.i_verify_the_in_step(SDplaceOrderofBroker1.java:96)
+	at stepDefinations.SDplaceOrderofBroker1.i_verify_the_in_step(SDplaceOrderofBroker1.java:97)
 	at âœ½.I verify the  &quot;200&quot; in step(file:///C:/Users/Dell/eclipse_csk/CSXautomation2/src/test/java/feature/placeOrder.feature:100)
 &amp;#27;[0m
   &amp;#27;[36mAnd &amp;#27;[0m&amp;#27;[36mVerify key &amp;#27;[0m&amp;#27;[36m&amp;#27;[1m&quot;message&quot;&amp;#27;[0m&amp;#27;[36m of response &amp;#27;[0m&amp;#27;[36m&amp;#27;[1m&quot;IP removed successfully&quot;&amp;#27;[0m &amp;#27;[90m# stepDefinations.SDplaceOrderofBroker1.verify_key_of_response(java.lang.String,java.lang.String)&amp;#27;[0m
 </system-out>
   </testcase>
-  <testcase classname="cucumber.options.TestRunner" name="runScenario" time="0.447">
+  <testcase classname="cucumber.options.TestRunner" name="runScenario" time="0.494">
     <failure message="expected:&lt;[5]00&gt; but was:&lt;[2]00&gt;" type="org.junit.ComparisonFailure">org.junit.ComparisonFailure: expected:&lt;[5]00&gt; but was:&lt;[2]00&gt;
 	at org.junit.Assert.assertEquals(Assert.java:117)
 	at org.junit.Assert.assertEquals(Assert.java:146)
-	at stepDefinations.SDplaceOrderofBroker1.i_verify_the_in_step(SDplaceOrderofBroker1.java:96)
+	at stepDefinations.SDplaceOrderofBroker1.i_verify_the_in_step(SDplaceOrderofBroker1.java:97)
 	at ✽.I verify the  &quot;200&quot; in step(file:///C:/Users/Dell/eclipse_csk/CSXautomation2/src/test/java/feature/placeOrder.feature:107)
 </failure>
     <system-out>
 @CancelAllOrder @Regression
-Scenario: Verify CancelAllOrder                                                      &amp;#27;[90m# src/test/java/feature/placeOrder.feature:104&amp;#27;[0m
-  &amp;#27;[32mWhen &amp;#27;[0m&amp;#27;[32mProviding request PathUrl &amp;#27;[0m&amp;#27;[32m&amp;#27;[1m&quot;CancelAllOrders&quot;&amp;#27;[0m&amp;#27;[32m with method &amp;#27;[0m&amp;#27;[32m&amp;#27;[1m&quot;DELETE&quot;&amp;#27;[0m              &amp;#27;[90m# stepDefinations.SDplaceOrderofBroker1.providing_request_path_url_with_method(java.lang.String,java.lang.String)&amp;#27;[0m
-  &amp;#27;[31mThen &amp;#27;[0m&amp;#27;[31mI verify the  &amp;#27;[0m&amp;#27;[31m&amp;#27;[1m&quot;200&quot;&amp;#27;[0m&amp;#27;[31m in step&amp;#27;[0m                                                   &amp;#27;[90m# stepDefinations.SDplaceOrderofBroker1.i_verify_the_in_step(java.lang.String)&amp;#27;[0m
+Scenario: Verify CancelAllOrder                                                     &amp;#27;[90m# src/test/java/feature/placeOrder.feature:104&amp;#27;[0m
+  &amp;#27;[32mWhen &amp;#27;[0m&amp;#27;[32mProviding request PathUrl &amp;#27;[0m&amp;#27;[32m&amp;#27;[1m&quot;CancelAllOrders&quot;&amp;#27;[0m&amp;#27;[32m with method &amp;#27;[0m&amp;#27;[32m&amp;#27;[1m&quot;DELETE&quot;&amp;#27;[0m             &amp;#27;[90m# stepDefinations.SDplaceOrderofBroker1.providing_request_path_url_with_method(java.lang.String,java.lang.String)&amp;#27;[0m
+  &amp;#27;[31mThen &amp;#27;[0m&amp;#27;[31mI verify the  &amp;#27;[0m&amp;#27;[31m&amp;#27;[1m&quot;200&quot;&amp;#27;[0m&amp;#27;[31m in step&amp;#27;[0m                                                  &amp;#27;[90m# stepDefinations.SDplaceOrderofBroker1.i_verify_the_in_step(java.lang.String)&amp;#27;[0m
       &amp;#27;[31morg.junit.ComparisonFailure: expected:&lt;[5]00&gt; but was:&lt;[2]00&gt;
 	at org.junit.Assert.assertEquals(Assert.java:117)
 	at org.junit.Assert.assertEquals(Assert.java:146)
-	at stepDefinations.SDplaceOrderofBroker1.i_verify_the_in_step(SDplaceOrderofBroker1.java:96)
+	at stepDefinations.SDplaceOrderofBroker1.i_verify_the_in_step(SDplaceOrderofBroker1.java:97)
 	at âœ½.I verify the  &quot;200&quot; in step(file:///C:/Users/Dell/eclipse_csk/CSXautomation2/src/test/java/feature/placeOrder.feature:107)
 &amp;#27;[0m
-  &amp;#27;[36mAnd &amp;#27;[0m&amp;#27;[36mVerify key &amp;#27;[0m&amp;#27;[36m&amp;#27;[1m&quot;message&quot;&amp;#27;[0m&amp;#27;[36m of response &amp;#27;[0m&amp;#27;[36m&amp;#27;[1m&quot;Orders cancellation in progress&quot;&amp;#27;[0m             &amp;#27;[90m# stepDefinations.SDplaceOrderofBroker1.verify_key_of_response(java.lang.String,java.lang.String)&amp;#27;[0m
-  &amp;#27;[36mWhen &amp;#27;[0m&amp;#27;[36mFor_Broker2_Providing request PathUrl &amp;#27;[0m&amp;#27;[36m&amp;#27;[1m&quot;CancelAllOrders&quot;&amp;#27;[0m&amp;#27;[36m with method &amp;#27;[0m&amp;#27;[36m&amp;#27;[1m&quot;DELETE&quot;&amp;#27;[0m  &amp;#27;[90m# stepDefinations.SDplaceOrderofBroker1.For_Broker2_providing_request_path_url_with_method(java.lang.String,java.lang.String)&amp;#27;[0m
-  &amp;#27;[36mThen &amp;#27;[0m&amp;#27;[36mFor_Broker2_I verify the  &amp;#27;[0m&amp;#27;[36m&amp;#27;[1m&quot;200&quot;&amp;#27;[0m&amp;#27;[36m in step&amp;#27;[0m                                       &amp;#27;[90m# stepDefinations.SDplaceOrderofBroker1.For_Broker2_i_verify_the_in_step(java.lang.String)&amp;#27;[0m
-  &amp;#27;[36mAnd &amp;#27;[0m&amp;#27;[36mFor_Broker2_Verify key &amp;#27;[0m&amp;#27;[36m&amp;#27;[1m&quot;message&quot;&amp;#27;[0m&amp;#27;[36m of response &amp;#27;[0m&amp;#27;[36m&amp;#27;[1m&quot;Orders cancellation in progress&quot;&amp;#27;[0m &amp;#27;[90m# stepDefinations.SDplaceOrderofBroker1.For_Broker2_verify_key_of_response(java.lang.String,java.lang.String)&amp;#27;[0m
+  &amp;#27;[36mAnd &amp;#27;[0m&amp;#27;[36mVerify key &amp;#27;[0m&amp;#27;[36m&amp;#27;[1m&quot;message&quot;&amp;#27;[0m&amp;#27;[36m of response &amp;#27;[0m&amp;#27;[36m&amp;#27;[1m&quot;Orders cancellation in progress&quot;&amp;#27;[0m            &amp;#27;[90m# stepDefinations.SDplaceOrderofBroker1.verify_key_of_response(java.lang.String,java.lang.String)&amp;#27;[0m
+  &amp;#27;[36mWhen &amp;#27;[0m&amp;#27;[36mFor_Broker2_Providing request PathUrl &amp;#27;[0m&amp;#27;[36m&amp;#27;[1m&quot;CancelAllOrders&quot;&amp;#27;[0m&amp;#27;[36m with method &amp;#27;[0m&amp;#27;[36m&amp;#27;[1m&quot;DELETE&quot;&amp;#27;[0m &amp;#27;[90m# stepDefinations.SDplaceOrderofBroker1.For_Broker2_providing_request_path_url_with_method(java.lang.String,java.lang.String)&amp;#27;[0m
+  &amp;#27;[36mThen &amp;#27;[0m&amp;#27;[36mI verify the  &amp;#27;[0m&amp;#27;[36m&amp;#27;[1m&quot;200&quot;&amp;#27;[0m&amp;#27;[36m in step&amp;#27;[0m                                                  &amp;#27;[90m# stepDefinations.SDplaceOrderofBroker1.i_verify_the_in_step(java.lang.String)&amp;#27;[0m
+  &amp;#27;[36mAnd &amp;#27;[0m&amp;#27;[36mVerify key &amp;#27;[0m&amp;#27;[36m&amp;#27;[1m&quot;message&quot;&amp;#27;[0m&amp;#27;[36m of response &amp;#27;[0m&amp;#27;[36m&amp;#27;[1m&quot;Orders cancellation in progress&quot;&amp;#27;[0m            &amp;#27;[90m# stepDefinations.SDplaceOrderofBroker1.verify_key_of_response(java.lang.String,java.lang.String)&amp;#27;[0m
 </system-out>
   </testcase>
+  <testcase classname="cucumber.options.TestRunner" name="runScenario" time="0.533"/>
+  <testcase classname="cucumber.options.TestRunner" name="runScenario" time="0.537"/>
+  <testcase classname="cucumber.options.TestRunner" name="runScenario" time="0.399"/>
 </testsuite>

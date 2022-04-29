@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>1/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Apr 25 13:30:56 IST 2022</td>
+<td>Started on:</td><td>Thu Apr 28 13:38:18 IST 2022</td>
 </tr>
-<tr><td>Total time:</td><td>23 seconds (23619 ms)</td>
+<tr><td>Total time:</td><td>31 seconds (31290 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,30 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='cucumber.options.TestRunner.runScenario()'><b>runScenario</b><br>Test class: cucumber.options.TestRunner<br>Parameters: "Verify GetBalance", "Optional[CSX Regression]"</td>
+<td><div><pre>org.junit.ComparisonFailure: expected:&lt;[FULFILLED]&gt; but was:&lt;[OPEN]&gt;
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at stepDefinations.SDplaceOrderofBroker1.verify_key_of_response(SDplaceOrderofBroker1.java:105)
+	at ?.Verify key &quot;data.status&quot; of response &quot;OPEN&quot;(file:///C:/Users/Dell/eclipse_csk/CSXautomation2/src/test/java/demoFeature/demo.feature:12)
+</pre></div><a href='#' onClick='toggleBox("stack-trace339734447", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace339734447'><pre>org.junit.ComparisonFailure: expected:&lt;[FULFILLED]&gt; but was:&lt;[OPEN]&gt;
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at stepDefinations.SDplaceOrderofBroker1.verify_key_of_response(SDplaceOrderofBroker1.java:105)
+	at ?.Verify key &quot;data.status&quot; of response &quot;OPEN&quot;(file:///C:/Users/Dell/eclipse_csk/CSXautomation2/src/test/java/demoFeature/demo.feature:12)
+</pre></div></td>
+<td>11</td>
+<td>cucumber.options.TestRunner@33bc72d1</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -75,10 +99,10 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='cucumber.options.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: cucumber.options.TestNGTestRunner<br>Parameters: "Verify GetBalance of diffrent broker", "Optional[CSX Regression]"</td>
+<td title='cucumber.options.TestRunner.runScenario()'><b>runScenario</b><br>Test class: cucumber.options.TestRunner<br>Parameters: "Verify GetBalance of diffrent broker", "Optional[CSX Regression]"</td>
 <td></td>
-<td>23</td>
-<td>cucumber.options.TestNGTestRunner@33bc72d1</td></tr>
+<td>18</td>
+<td>cucumber.options.TestRunner@33bc72d1</td></tr>
 </table><p>
 </body>
 </html>

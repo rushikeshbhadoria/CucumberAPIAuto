@@ -78,6 +78,7 @@ public class SDplaceOrderofBroker1 extends Utils {
 
 		if (method.equalsIgnoreCase("POST"))
 			response = res2.when().post(resourceAPI.getResource());
+		
 		else if (method.equalsIgnoreCase("GET"))
 			response = res1.when().get(resourceAPI.getResource());
 		else if (method.equalsIgnoreCase("PATCH"))
@@ -157,8 +158,8 @@ public class SDplaceOrderofBroker1 extends Utils {
 		System.out.println(name + " = " + post.get(name));
 	}
 
-	@Then("Calculate fees for same broker")
-	public void calculate_fees_for_same_broker() {
+	@Then("Check fees {string} for same broker")
+	public void calculate_fees_for_same_broker(String expectedfee) {
 
 		double s1b1inr = (double) post.get("s1b1inr");
 		double s3b1inr = (double) post.get("s3b1inr");
@@ -170,6 +171,11 @@ public class SDplaceOrderofBroker1 extends Utils {
 		} else {
 			System.out.println("difference between BTC is found");
 		}
+		
+		String stringFee=String.valueOf(FEE); 
+		assertSame(stringFee, expectedfee);
+		
+		
 
 	}
 
@@ -237,13 +243,13 @@ public class SDplaceOrderofBroker1 extends Utils {
 	@Given("For_Broker2_Update an order of  instrument {string} quantityType {string} quantity {string} limitPrice {string} username {string} orderType {string}")
 	public void For_Broker2_update_an_order_of_instrument_quantity_type_quantity_limit_price_username(
 			String instruments, String quantityType, String quantity, String limit_Price, String username,
-			String orderType) throws IOException {
+			String orderType) throws IOException, InterruptedException {
 		String updateOrder = "{\r\n" + "    \"type\": \"" + orderType + "\",\r\n" + "    \"instrument\": \""
 				+ instruments + "\",\r\n" + "    \"quantityType\": \"" + quantityType + "\",\r\n" + "    \"quantity\": "
 				+ quantity + ",\r\n" + "  \"limit_Price\": " + limit_Price + ",    \r\n" + "  \"username\": \""
 				+ username + "\"\r\n" + "}";
 		res3 = given().relaxedHTTPSValidation().spec(requestSpecificationOfBroker2()).body(updateOrder);
-
+		Thread.sleep(1000);
 	}
 
 	@Given("For_Broker2_Add IP for a broker")
@@ -286,8 +292,8 @@ public class SDplaceOrderofBroker1 extends Utils {
 
 	}
 
-	@Then("Calculate fees for diffrent broker")
-	public void calculate_fees_for_diffrent_broker() {
+	@Then("Check fees {string} for diffrent broker")
+	public void calculate_fees_for_diffrent_broker(String expectedfee) {
 		System.out.println("-------------------------------------------------------------------------------------");
 		// Deduction_of_INR_from_broker1
 		double s1b1inr = (double) post.get("s1b1inr");
@@ -317,6 +323,11 @@ public class SDplaceOrderofBroker1 extends Utils {
 		double Fee_for_diffrent_broker = Deduction_of_INR_from_broker1 - Addition_of_INR_in_broker2;
 		System.out.println("Fee_for_diffrent_broker = " + Fee_for_diffrent_broker);
 		System.out.println("-------------------------------------------------------------------------------------");
+		String stringFee=String.valueOf(Fee_for_diffrent_broker); 
+		assertEquals(stringFee, expectedfee);
+		String addBtcOfBroker1=String.valueOf(Addition_of_BTC_to_broker1); 
+		String deductionBtcOfBroker2=String.valueOf(Deduction_of_BTC_to_broker2); 
+		assertEquals(addBtcOfBroker1, deductionBtcOfBroker2);
 	}
 
 }
