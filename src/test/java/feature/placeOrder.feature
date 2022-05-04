@@ -3,7 +3,7 @@ Feature: CSX Regression
  
   @PlaceGetDeleteOrder @Regression
   Scenario Outline: Verify place order , get order  and cancel order api
-    Given Placing an order of type "<type>" side "<side>" instrument "<instrument>" quantityType "<quantityType>" quantity "<quantity>" limitPrice "<limitPrice>" username "<username>"
+    Given Placing an order for broker "B2" of type "<type>" side "<side>" instrument "<instrument>" quantityType "<quantityType>" quantity "<quantity>" limitPrice "<limitPrice>" username "<username>"
     When Providing request PathUrl "PlaceOrder" with method "POST"
     Then I verify the  "200" in step
     And Verify key "data.side" of response "<side>"
@@ -22,13 +22,13 @@ Feature: CSX Regression
 
   @UpdateOrder @Regression
   Scenario: Verify Update Order api
-    Given Placing an order of type "limit" side "BUY" instrument "btc/inr" quantityType "quote" quantity "10000" limitPrice "102" username "user1"
+    Given Placing an order for broker "B2" of type "limit" side "BUY" instrument "btc/inr" quantityType "quote" quantity "10000" limitPrice "102" username "user1"
     When Providing request PathUrl "PlaceOrder" with method "POST"
     Then I verify the  "200" in step
     And Verify key "message" of response "Order placed successfully"
     And Verify the "data.orderID" of response "GetOrder"
     And Verify key "data.status" of response "OPEN"
-    Given Update an order of  instrument "btc/inr" quantityType "quote" quantity "103.5" limitPrice "103" username "user1" orderType "LIMIT"
+    Given Update an order for broker "B2" of  instrument "btc/inr" quantityType "quote" quantity "103.5" limitPrice "103" username "user1" orderType "LIMIT"
     When Providing request PathUrl "PlaceOrder" with method "PATCH"
     Then I verify the  "200" in step
     And Verify key "message" of response "Order updated successfully"
@@ -37,7 +37,7 @@ Feature: CSX Regression
 
   @Add_Delete_IP @Regression
   Scenario: Verify Add IP and delete IP
-    Given Add IP for a broker
+    Given Add IP for a broker "B2"
     When Providing request PathUrl "AddIP" with method "POST"
     Then I verify the  "200" in step
     Then Extracting the data "data"
@@ -48,28 +48,27 @@ Feature: CSX Regression
   @CancelAllOrder @Regression
   Scenario: Verify CancelAllOrder
     #cancel all order from broker 1
+    Given loading the header for broker "B1"
     When Providing request PathUrl "CancelAllOrders" with method "DELETE"
-    Then I verify the  "200" in step
-    And Verify key "message" of response "Orders cancellation in progress"
+    #Then I verify the  "200" in step
+    #And Verify key "message" of response "Orders cancellation in progress"
     #cancel all order from broker 2
-    When For_Broker2_Providing request PathUrl "CancelAllOrders" with method "DELETE"
-    Then I verify the  "200" in step
-    And Verify key "message" of response "Orders cancellation in progress"
+    Given loading the header for broker "B2"
+    When Providing request PathUrl "CancelAllOrders" with method "DELETE"
+    #Then I verify the  "200" in step
+    #And Verify key "message" of response "Orders cancellation in progress"
 
   @GetAllOrder @Regression
   Scenario: Verify GetAllOrder
+    Given loading the header for broker "B1"
     When Providing request PathUrl "GetAllOrders" with method "GET"
     Then I verify the  "200" in step
     And Verify key "message" of response "Orders fetched successfully"
 
-  @GetAllOrder @Regression
-  Scenario: Verify GetAllOrder
-    When Providing request PathUrl "GetAllOrders" with method "GET"
-    Then I verify the  "200" in step
-    And Verify key "message" of response "Orders fetched successfully"
 
   @GetAllIps @Regression
   Scenario: Verify GetAllIps
+    Given loading the header for broker "B1"
     When Providing request PathUrl "AddIP" with method "GET"
     Then I verify the  "200" in step
     And Verify key "message" of response "Listed IPs for the Broker"

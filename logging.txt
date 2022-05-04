@@ -1,153 +1,30 @@
 Request method:	GET
-Request URI:	https://k8s-cskdev-cdfb21ffcd-1502641994.ap-south-1.elb.amazonaws.com/api/v1/orders/
-Proxy:			<none>
-Request params:	<none>
-Query params:	<none>
-Form params:	<none>
-Path params:	<none>
-Headers:		CSX-ACCESS-KEY=b969c88ddbf964999520c092266843d81edbe67c9cd35290522643060141c6a6
-				CSX-SIGNATURE=a62c54312705a0e518223d92009b5da3af20e0cf395d9827b8b8697be7bffc2b
-				csx-access-timestamp=1651133322
-				Accept=application/json
-				Content-Type=application/json
-Cookies:		<none>
-Multiparts:		<none>
-Body:			<none>
-HTTP/1.1 405 Method Not Allowed
-Date: Thu, 28 Apr 2022 08:08:43 GMT
-Content-Type: application/json
-Content-Length: 66
-Connection: keep-alive
-allow: POST
-x-envoy-upstream-service-time: 1
-server: envoy
-
-{
-    "code": 405,
-    "message": "method GET is not allowed, but [POST] are"
-}
-Request method:	GET
-Request URI:	https://k8s-cskdev-cdfb21ffcd-1502641994.ap-south-1.elb.amazonaws.com/api/v1/orders/53f3e3ad-7767-4cf7-9915-29613695a21c
-Proxy:			<none>
-Request params:	<none>
-Query params:	<none>
-Form params:	<none>
-Path params:	<none>
-Headers:		CSX-ACCESS-KEY=b969c88ddbf964999520c092266843d81edbe67c9cd35290522643060141c6a6
-				CSX-SIGNATURE=a62c54312705a0e518223d92009b5da3af20e0cf395d9827b8b8697be7bffc2b
-				csx-access-timestamp=1651133322
-				Accept=application/json
-				Content-Type=application/json
-Cookies:		<none>
-Multiparts:		<none>
-Body:			<none>
-HTTP/1.1 200 OK
-Date: Thu, 28 Apr 2022 08:08:43 GMT
-Content-Type: application/json
-Content-Length: 311
-Connection: keep-alive
-access-control-allow-origin: *
-x-envoy-upstream-service-time: 8
-server: envoy
-
-{
-    "data": {
-        "average_price": "0",
-        "brokerID": "3ab607d8-8836-4aeb-a71d-7030e7c4524f",
-        "filledQuantity": 0,
-        "instrument": "BTC/INR",
-        "limit_price": "5000",
-        "makerFee": "0.03",
-        "orderID": "53f3e3ad-7767-4cf7-9915-29613695a21c",
-        "quantity": 1,
-        "side": "SELL",
-        "status": "OPEN",
-        "takerFee": "0.06"
-    },
-    "message": "Order fetched successfully"
-}
-Request method:	DELETE
-Request URI:	https://k8s-cskdev-cdfb21ffcd-1502641994.ap-south-1.elb.amazonaws.com/api/v1/me/orders/53f3e3ad-7767-4cf7-9915-29613695a21c
-Proxy:			<none>
-Request params:	<none>
-Query params:	<none>
-Form params:	<none>
-Path params:	<none>
-Headers:		CSX-ACCESS-KEY=b969c88ddbf964999520c092266843d81edbe67c9cd35290522643060141c6a6
-				CSX-SIGNATURE=a62c54312705a0e518223d92009b5da3af20e0cf395d9827b8b8697be7bffc2b
-				csx-access-timestamp=1651133322
-				Accept=application/json
-				Content-Type=application/json
-Cookies:		<none>
-Multiparts:		<none>
-Body:			<none>
-HTTP/1.1 404 Not Found
-Date: Thu, 28 Apr 2022 08:08:44 GMT
-Content-Type: application/json
-Content-Length: 98
-Connection: keep-alive
-x-envoy-upstream-service-time: 1
-server: envoy
-
-{
-    "code": 404,
-    "message": "path /api/v1/me/orders/53f3e3ad-7767-4cf7-9915-29613695a21c was not found"
-}
-Request method:	GET
-Request URI:	https://k8s-cskdev-cdfb21ffcd-1502641994.ap-south-1.elb.amazonaws.com/api/v1/me/balance/
-Proxy:			<none>
-Request params:	<none>
-Query params:	<none>
-Form params:	<none>
-Path params:	<none>
-Headers:		CSX-ACCESS-KEY=b969c88ddbf964999520c092266843d81edbe67c9cd35290522643060141c6a6
-				CSX-SIGNATURE=a62c54312705a0e518223d92009b5da3af20e0cf395d9827b8b8697be7bffc2b
-				csx-access-timestamp=1651133322
-				Accept=application/json
-				Content-Type=application/json
-Cookies:		<none>
-Multiparts:		<none>
-Body:			<none>
-HTTP/1.1 422 Unprocessable Entity
-Date: Thu, 28 Apr 2022 08:08:47 GMT
-Content-Type: application/json
-Content-Length: 51
-Connection: keep-alive
-access-control-allow-origin: *
-x-envoy-upstream-service-time: 3
-server: envoy
-
-{
-    "code": 602,
-    "message": "asset in query is required"
-}
-Request method:	GET
 Request URI:	https://k8s-cskdev-cdfb21ffcd-1502641994.ap-south-1.elb.amazonaws.com/api/v1/me/balance/?asset=INR
 Proxy:			<none>
 Request params:	<none>
 Query params:	<none>
 Form params:	<none>
 Path params:	<none>
-Headers:		CSX-ACCESS-KEY=b969c88ddbf964999520c092266843d81edbe67c9cd35290522643060141c6a6
+Headers:		CSX-ACCESS-KEY=8bf9ff80fa1691087e8292ee9340509993f7ce91ec0b6ce207902e4b3ad11b88
 				CSX-SIGNATURE=a62c54312705a0e518223d92009b5da3af20e0cf395d9827b8b8697be7bffc2b
-				csx-access-timestamp=1651133322
+				csx-access-timestamp=1651654410
 				Accept=application/json
 				Content-Type=application/json
 Cookies:		<none>
 Multiparts:		<none>
 Body:			<none>
 HTTP/1.1 200 OK
-Date: Thu, 28 Apr 2022 08:08:48 GMT
+Date: Wed, 04 May 2022 08:53:31 GMT
 Content-Type: application/json
-Content-Length: 80
+Content-Length: 82
 Connection: keep-alive
 access-control-allow-origin: *
-x-envoy-upstream-service-time: 380
+x-envoy-upstream-service-time: 231
 server: envoy
 
 {
     "data": {
-        "balance": "17444677.998485"
+        "balance": "1164136413.516554"
     },
     "message": "Balance fetched successfully"
 }
@@ -158,175 +35,26 @@ Request params:	<none>
 Query params:	asset=INR
 Form params:	<none>
 Path params:	<none>
-Headers:		CSX-ACCESS-KEY=b969c88ddbf964999520c092266843d81edbe67c9cd35290522643060141c6a6
-				CSX-SIGNATURE=a62c54312705a0e518223d92009b5da3af20e0cf395d9827b8b8697be7bffc2b
-				csx-access-timestamp=1651133322
-				Accept=application/json
-				Content-Type=application/json
-Cookies:		<none>
-Multiparts:		<none>
-Body:			<none>
-HTTP/1.1 200 OK
-Date: Thu, 28 Apr 2022 08:08:49 GMT
-Content-Type: application/json
-Content-Length: 80
-Connection: keep-alive
-access-control-allow-origin: *
-x-envoy-upstream-service-time: 399
-server: envoy
-
-{
-    "data": {
-        "balance": "17444677.998485"
-    },
-    "message": "Balance fetched successfully"
-}
-Request method:	GET
-Request URI:	https://k8s-cskdev-cdfb21ffcd-1502641994.ap-south-1.elb.amazonaws.com/api/v1/me/balance/?asset=INR
-Proxy:			<none>
-Request params:	<none>
-Query params:	asset=INR
-Form params:	<none>
-Path params:	<none>
-Headers:		CSX-ACCESS-KEY=b969c88ddbf964999520c092266843d81edbe67c9cd35290522643060141c6a6
-				CSX-SIGNATURE=a62c54312705a0e518223d92009b5da3af20e0cf395d9827b8b8697be7bffc2b
-				csx-access-timestamp=1651133322
-				Accept=application/json
-				Content-Type=application/json
-Cookies:		<none>
-Multiparts:		<none>
-Body:			<none>
-HTTP/1.1 200 OK
-Date: Thu, 28 Apr 2022 08:08:49 GMT
-Content-Type: application/json
-Content-Length: 75
-Connection: keep-alive
-access-control-allow-origin: *
-x-envoy-upstream-service-time: 299
-server: envoy
-
-{
-    "data": {
-        "balance": "818.759097"
-    },
-    "message": "Balance fetched successfully"
-}
-est URI:	https://k8s-cskdev-cdfb21ffcd-1502641994.ap-south-1.elb.amazonaws.com/api/v1/me/balance/?asset=INR&asset=BTC
-Proxy:			<none>
-Request params:	<none>
-Query params:	asset=[INR, BTC]
-Form params:	<none>
-Path params:	<none>
 Headers:		CSX-ACCESS-KEY=8bf9ff80fa1691087e8292ee9340509993f7ce91ec0b6ce207902e4b3ad11b88
 				CSX-SIGNATURE=a62c54312705a0e518223d92009b5da3af20e0cf395d9827b8b8697be7bffc2b
-				csx-access-timestamp=1651133315
+				csx-access-timestamp=1651654410
 				Accept=application/json
 				Content-Type=application/json
 Cookies:		<none>
 Multiparts:		<none>
 Body:			<none>
 HTTP/1.1 200 OK
-Date: Thu, 28 Apr 2022 08:08:45 GMT
-Content-Type: application/json
-Content-Length: 76
-Connection: keep-alive
-access-control-allow-origin: *
-x-envoy-upstream-service-time: 302
-server: envoy
-
-{
-    "data": {
-        "balance": "1675.084463"
-    },
-    "message": "Balance fetched successfully"
-}
-Request method:	GET
-Request URI:	https://k8s-cskdev-cdfb21ffcd-1502641994.ap-south-1.elb.amazonaws.com/api/v1/me/balance/?asset=INR&asset=BTC
-Proxy:			<none>
-Request params:	<none>
-Query params:	asset=[INR, BTC]
-Form params:	<none>
-Path params:	<none>
-Headers:		CSX-ACCESS-KEY=8bf9ff80fa1691087e8292ee9340509993f7ce91ec0b6ce207902e4b3ad11b88
-				CSX-SIGNATURE=a62c54312705a0e518223d92009b5da3af20e0cf395d9827b8b8697be7bffc2b
-				csx-access-timestamp=1651133315
-				Accept=application/json
-				Content-Type=application/json
-Cookies:		<none>
-Multiparts:		<none>
-Body:			<none>
-HTTP/1.1 200 OK
-Date: Thu, 28 Apr 2022 08:08:46 GMT
+Date: Wed, 04 May 2022 08:53:31 GMT
 Content-Type: application/json
 Content-Length: 79
 Connection: keep-alive
 access-control-allow-origin: *
-x-envoy-upstream-service-time: 376
+x-envoy-upstream-service-time: 223
 server: envoy
 
 {
     "data": {
-        "balance": "5444539.036554"
-    },
-    "message": "Balance fetched successfully"
-}
-Request method:	GET
-Request URI:	https://k8s-cskdev-cdfb21ffcd-1502641994.ap-south-1.elb.amazonaws.com/api/v1/me/balance/?asset=INR&asset=BTC&asset=INR
-Proxy:			<none>
-Request params:	<none>
-Query params:	asset=[INR, BTC, INR]
-Form params:	<none>
-Path params:	<none>
-Headers:		CSX-ACCESS-KEY=8bf9ff80fa1691087e8292ee9340509993f7ce91ec0b6ce207902e4b3ad11b88
-				CSX-SIGNATURE=a62c54312705a0e518223d92009b5da3af20e0cf395d9827b8b8697be7bffc2b
-				csx-access-timestamp=1651133315
-				Accept=application/json
-				Content-Type=application/json
-Cookies:		<none>
-Multiparts:		<none>
-Body:			<none>
-HTTP/1.1 200 OK
-Date: Thu, 28 Apr 2022 08:08:46 GMT
-Content-Type: application/json
-Content-Length: 79
-Connection: keep-alive
-access-control-allow-origin: *
-x-envoy-upstream-service-time: 256
-server: envoy
-
-{
-    "data": {
-        "balance": "5444539.036554"
-    },
-    "message": "Balance fetched successfully"
-}
-Request method:	GET
-Request URI:	https://k8s-cskdev-cdfb21ffcd-1502641994.ap-south-1.elb.amazonaws.com/api/v1/me/balance/?asset=INR&asset=BTC&asset=INR
-Proxy:			<none>
-Request params:	<none>
-Query params:	asset=[INR, BTC, INR]
-Form params:	<none>
-Path params:	<none>
-Headers:		CSX-ACCESS-KEY=8bf9ff80fa1691087e8292ee9340509993f7ce91ec0b6ce207902e4b3ad11b88
-				CSX-SIGNATURE=a62c54312705a0e518223d92009b5da3af20e0cf395d9827b8b8697be7bffc2b
-				csx-access-timestamp=1651133315
-				Accept=application/json
-				Content-Type=application/json
-Cookies:		<none>
-Multiparts:		<none>
-Body:			<none>
-HTTP/1.1 200 OK
-Date: Thu, 28 Apr 2022 08:08:47 GMT
-Content-Type: application/json
-Content-Length: 76
-Connection: keep-alive
-access-control-allow-origin: *
-x-envoy-upstream-service-time: 222
-server: envoy
-
-{
-    "data": {
-        "balance": "1675.084463"
+        "balance": "8001664.834503"
     },
     "message": "Balance fetched successfully"
 }
