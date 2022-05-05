@@ -1,60 +1,102 @@
 Request method:	GET
-Request URI:	https://k8s-cskdev-cdfb21ffcd-1502641994.ap-south-1.elb.amazonaws.com/api/v1/me/balance/?asset=INR
+Request URI:	https://k8s-cskdev-cdfb21ffcd-1502641994.ap-south-1.elb.amazonaws.com/api/v1/orders/92c88efa-acf3-48d2-8c59-7284e7445630
 Proxy:			<none>
 Request params:	<none>
 Query params:	<none>
 Form params:	<none>
 Path params:	<none>
-Headers:		CSX-ACCESS-KEY=8bf9ff80fa1691087e8292ee9340509993f7ce91ec0b6ce207902e4b3ad11b88
+Headers:		CSX-ACCESS-KEY=b969c88ddbf964999520c092266843d81edbe67c9cd35290522643060141c6a6
 				CSX-SIGNATURE=a62c54312705a0e518223d92009b5da3af20e0cf395d9827b8b8697be7bffc2b
-				csx-access-timestamp=1651654410
+				csx-access-timestamp=1651665515
 				Accept=application/json
 				Content-Type=application/json
 Cookies:		<none>
 Multiparts:		<none>
 Body:			<none>
 HTTP/1.1 200 OK
-Date: Wed, 04 May 2022 08:53:31 GMT
+Date: Wed, 04 May 2022 11:58:39 GMT
 Content-Type: application/json
-Content-Length: 82
+Content-Length: 397
 Connection: keep-alive
 access-control-allow-origin: *
-x-envoy-upstream-service-time: 231
+x-envoy-upstream-service-time: 10
 server: envoy
 
 {
     "data": {
-        "balance": "1164136413.516554"
+        "average_price": "0",
+        "brokerID": "3ab607d8-8836-4aeb-a71d-7030e7c4524f",
+        "created_at": "2022-05-04T11:58:37.629Z",
+        "filledQuantity": 0,
+        "instrument": "BTC/INR",
+        "limit_price": "102",
+        "makerFee": "-0.03",
+        "orderID": "92c88efa-acf3-48d2-8c59-7284e7445630",
+        "quantity": 98.03921,
+        "side": "BUY",
+        "status": "OPEN",
+        "takerFee": "0.06",
+        "updated_at": "2022-05-04T11:58:37.629Z"
     },
-    "message": "Balance fetched successfully"
+    "message": "Order fetched successfully"
 }
-Request method:	GET
-Request URI:	https://k8s-cskdev-cdfb21ffcd-1502641994.ap-south-1.elb.amazonaws.com/api/v1/me/balance/?asset=INR
+Request method:	DELETE
+Request URI:	https://k8s-cskdev-cdfb21ffcd-1502641994.ap-south-1.elb.amazonaws.com/api/v1/orders/92c88efa-acf3-48d2-8c59-7284e7445630
 Proxy:			<none>
 Request params:	<none>
-Query params:	asset=INR
+Query params:	<none>
 Form params:	<none>
 Path params:	<none>
-Headers:		CSX-ACCESS-KEY=8bf9ff80fa1691087e8292ee9340509993f7ce91ec0b6ce207902e4b3ad11b88
+Headers:		CSX-ACCESS-KEY=b969c88ddbf964999520c092266843d81edbe67c9cd35290522643060141c6a6
 				CSX-SIGNATURE=a62c54312705a0e518223d92009b5da3af20e0cf395d9827b8b8697be7bffc2b
-				csx-access-timestamp=1651654410
+				csx-access-timestamp=1651665515
 				Accept=application/json
 				Content-Type=application/json
 Cookies:		<none>
 Multiparts:		<none>
 Body:			<none>
 HTTP/1.1 200 OK
-Date: Wed, 04 May 2022 08:53:31 GMT
+Date: Wed, 04 May 2022 11:58:40 GMT
 Content-Type: application/json
-Content-Length: 79
+Content-Length: 93
 Connection: keep-alive
 access-control-allow-origin: *
-x-envoy-upstream-service-time: 223
+x-envoy-upstream-service-time: 19
 server: envoy
 
 {
     "data": {
-        "balance": "8001664.834503"
+        "cancelled": true,
+        "info": {
+            "message": "Order Cancelled"
+        }
     },
-    "message": "Balance fetched successfully"
+    "message": "Order cancelled"
+}
+Request method:	DELETE
+Request URI:	https://k8s-cskdev-cdfb21ffcd-1502641994.ap-south-1.elb.amazonaws.com/api/v1/me/orders/
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		CSX-ACCESS-KEY=b969c88ddbf964999520c092266843d81edbe67c9cd35290522643060141c6a6
+				CSX-SIGNATURE=a62c54312705a0e518223d92009b5da3af20e0cf395d9827b8b8697be7bffc2b
+				csx-access-timestamp=1651665515
+				Accept=application/json
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 500 Internal Server Error
+Date: Wed, 04 May 2022 11:58:40 GMT
+Content-Type: application/json
+Content-Length: 39
+Connection: keep-alive
+access-control-allow-origin: *
+x-envoy-upstream-service-time: 118
+server: envoy
+
+{
+    "message": "No Open Orders to Cancel"
 }

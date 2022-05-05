@@ -44,6 +44,8 @@ public class SDplaceOrderofBroker1 extends Utils {
 	ResponseSpecification resspec;
 	Response response;
 	// TestDataBuild data =new TestDataBuild();
+	String placeOrderBody;
+	String broker1;
 	static String order_id;
 	String ENUM;
 	JSONObject post = new JSONObject();
@@ -55,38 +57,56 @@ public class SDplaceOrderofBroker1 extends Utils {
 //	}
 
 	@Given("Placing an order for broker {string} of type {string} side {string} instrument {string} quantityType {string} quantity {string} limitPrice {string} username {string}")
-	public void placing_an_order_of_type_side_instrument_quantity_type_quantity_limit_price_username(String broker,String orderType,
-			String orderSide, String instruments, String quantityType, String quantity, String limitPrice,
-			String username) throws IOException {
+	public void placing_an_order_of_type_side_instrument_quantity_type_quantity_limit_price_username(String broker,
+			String orderType, String orderSide, String instruments, String quantityType, String quantity,
+			String limitPrice, String username) throws IOException {
+		broker1 = broker;
 
-		String placeOrderBody = "{\r\n" + "    \"type\": \"" + orderType + "\",\r\n" + "    \"side\": \"" + orderSide
+		placeOrderBody = "{\r\n" + "    \"type\": \"" + orderType + "\",\r\n" + "    \"side\": \"" + orderSide
 				+ "\",\r\n" + "    \"instrument\": \"" + instruments + "\",\r\n" + "    \"quantityType\": \""
 				+ quantityType + "\",\r\n" + "    \"quantity\": " + quantity + ",\r\n" + "  \"limitPrice\": "
 				+ limitPrice + ",    \r\n" + "  \"username\": \"" + username + "\"\r\n" + "}";
 
 		res2 = given().relaxedHTTPSValidation().spec(requestSpecificationOfBroker1(broker)).body(placeOrderBody);
 		res1 = given().relaxedHTTPSValidation().spec(requestSpecificationOfBroker1(broker));
-		//resspec = new ResponseSpecBuilder().expectContentType(ContentType.JSON).build();
+		// resspec = new
+		// ResponseSpecBuilder().expectContentType(ContentType.JSON).build();
 		resspec = new ResponseSpecBuilder().build();
-
 
 	}
-	
+
 	@Given("loading the header for broker {string}")
-    public void loading_the_header_for_broker_something(String broker) throws Throwable {
+	public void loading_the_header_for_broker_something(String broker) throws Throwable {
 		res1 = given().relaxedHTTPSValidation().spec(requestSpecificationOfBroker1(broker));
-		//resspec = new ResponseSpecBuilder().expectContentType(ContentType.JSON).build();
+		// resspec = new
+		// ResponseSpecBuilder().expectContentType(ContentType.JSON).build();
 		resspec = new ResponseSpecBuilder().build();
-    }
+	}
 
 	@When("Providing request PathUrl {string} with method {string}")
 	public void providing_request_path_url_with_method(String resource, String method) throws IOException {
 		APIResources resourceAPI = APIResources.valueOf(resource);
 		ENUM = resourceAPI.getResource();
+		String Enum = ENUM;
 		// System.out.println(resourceAPI.getResource());
 
-		if (method.equalsIgnoreCase("POST"))
+//		String body="{\r\n" + "    \"URL\": \"" + Enum + "\",\r\n" + "    \"Method\": \"" + method
+//				+ "\",\r\n" + "    \"Body\": \"" + placeOrderBody + "\",\r\n" + "    \"SecretKey\": \""
+//				+ getGlobalValue("CSX-SIGNATURE"+broker1) + "\",\r\n" + "   }";
+//	
+//		System.out.println(body);
+//		given()
+//		.body(body)
+//		.header("Content-Type","application/json")
+//		.when()
+//		.post("http://localhost:6969/generateSignature").		
+//		then()
+//		.log()
+//		.all().statusCode(200);
+
+		if (method.equalsIgnoreCase("POST")) {
 			response = res2.when().post(resourceAPI.getResource());
+		}
 
 		else if (method.equalsIgnoreCase("GET"))
 			response = res1.when().get(resourceAPI.getResource());
@@ -134,9 +154,9 @@ public class SDplaceOrderofBroker1 extends Utils {
 	}
 
 	@Given("Update an order for broker {string} of  instrument {string} quantityType {string} quantity {string} limitPrice {string} username {string} orderType {string}")
-	public void update_an_order_of_instrument_quantity_type_quantity_limit_price_username(String broker ,String instruments,
-			String quantityType, String quantity, String limit_Price, String username, String orderType)
-			throws IOException {
+	public void update_an_order_of_instrument_quantity_type_quantity_limit_price_username(String broker,
+			String instruments, String quantityType, String quantity, String limit_Price, String username,
+			String orderType) throws IOException {
 		String updateOrder = "{\r\n" + "    \"type\": \"" + orderType + "\",\r\n" + "    \"instrument\": \""
 				+ instruments + "\",\r\n" + "    \"quantityType\": \"" + quantityType + "\",\r\n" + "    \"quantity\": "
 				+ quantity + ",\r\n" + "  \"limit_Price\": " + limit_Price + ",    \r\n" + "  \"username\": \""
@@ -201,7 +221,7 @@ public class SDplaceOrderofBroker1 extends Utils {
 		long longSleep = Long.parseLong(time);
 		Thread.sleep(longSleep);
 	}
-	
+
 	@Then("Check fees {string} for diffrent broker")
 	public void calculate_fees_for_diffrent_broker(String expectedfee) {
 		System.out.println("-------------------------------------------------------------------------------------");
@@ -239,8 +259,5 @@ public class SDplaceOrderofBroker1 extends Utils {
 		String deductionBtcOfBroker2 = String.valueOf(Deduction_of_BTC_to_broker2);
 		assertEquals(addBtcOfBroker1, deductionBtcOfBroker2);
 	}
-
-
-	
 
 }

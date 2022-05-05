@@ -1,5 +1,7 @@
 package resource;
 
+import static io.restassured.RestAssured.given;
+
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -25,6 +27,13 @@ public class Utils {
 		String StringCurrentTimestamp = Long.toString(currentTimestamp);
 		
 		String publickey=getGlobalValue("CSX-ACCESS-KEY"+broker);
+		
+		
+		
+		
+		
+		
+		
 		String signature=getGlobalValue("CSX-SIGNATURE"+broker);
 //		System.out.println(publickey);
 //		System.out.println(signature);
@@ -45,28 +54,7 @@ public class Utils {
 		
 	}
 	
-	public RequestSpecification requestSpecificationOfBroker2() throws IOException
-	{
-		long currentTimestamp = System.currentTimeMillis() / 1000;
-		String StringCurrentTimestamp = Long.toString(currentTimestamp);
-		
-		
-		
-			PrintStream log = new PrintStream(new FileOutputStream("logging.txt"));
-			req = new RequestSpecBuilder()
-					.setBaseUri(getGlobalValue("baseUrl"))
-					.addHeader("Content-Type", "application/json")
-					.addHeader("CSX-ACCESS-KEY",getGlobalValue("CSX-ACCESS-KEY-B2"))
-					.addHeader("CSX-SIGNATURE",getGlobalValue("CSX-SIGNATUREB1"))
-							
-					.addHeader("csx-access-timestamp", StringCurrentTimestamp).addHeader("Accept", "application/json")
-					.addFilter(RequestLoggingFilter.logRequestTo(log)).addFilter(ResponseLoggingFilter.logResponseTo(log))
-					.build();
-		 return req;
-		
-		
-		
-	}
+	
 	
 	public static String getGlobalValue(String key) throws IOException
 	{
