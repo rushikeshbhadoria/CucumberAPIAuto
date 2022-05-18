@@ -194,7 +194,8 @@ public class SDplaceOrderofBroker1 extends Utils {
 		double balance = Double.parseDouble(actualName);
 
 		post.put(name, balance);
-		System.out.println(name + " = " + post.get(name));
+
+		System.out.println(name + " = " + actualName);
 	}
 
 	@Then("Check fees {string} for same broker")
@@ -204,15 +205,31 @@ public class SDplaceOrderofBroker1 extends Utils {
 		double s3b1inr = (double) post.get("s3b1inr");
 		double FEE = s1b1inr - s3b1inr;
 		double s1b1btc = (double) post.get("s1b1btc");
+		double s2b1btc = (double) post.get("s2b1btc");
+		double s2b1inr = (double) post.get("s2b1inr");
 		double s3b1btc = (double) post.get("s3b1btc");
-		if (s1b1btc - s3b1btc == 0) {
-			System.out.println("BTC is Same");
+		String stringFee = String.valueOf(FEE);
+
+		double DEE = Double.parseDouble(expectedfee);
+
+		String diffBTC = String.valueOf(s1b1btc - s2b1btc);
+		System.out.println("FEE = " + stringFee);
+		System.out.println("diffrence inr before matching = " + (s1b1inr - s2b1inr));
+		System.out.println("diffrence btc before matching = " + (s1b1btc - s2b1btc));
+
+		// System.out.println(s1b1btc - s3b1btc);
+		if (s1b1btc - s3b1btc > 0.00000001) {
+
+			assertEquals(stringFee, expectedfee);
 		} else {
-			System.out.println("difference between BTC is found");
+			System.out.println("Pass because diffrence = " + (s1b1btc - s3b1btc));
 		}
 
-		String stringFee = String.valueOf(FEE);
-		assertSame(stringFee, expectedfee);
+		if (DEE - FEE > 0.001) {
+			assertEquals(stringFee, expectedfee);
+		} else {
+			System.out.println("Pass because diffrence = " + (DEE - FEE));
+		}
 
 	}
 
@@ -254,10 +271,23 @@ public class SDplaceOrderofBroker1 extends Utils {
 		System.out.println("Fee_for_diffrent_broker = " + Fee_for_diffrent_broker);
 		System.out.println("-------------------------------------------------------------------------------------");
 		String stringFee = String.valueOf(Fee_for_diffrent_broker);
-		assertEquals(stringFee, expectedfee);
+
 		String addBtcOfBroker1 = String.valueOf(Addition_of_BTC_to_broker1);
 		String deductionBtcOfBroker2 = String.valueOf(Deduction_of_BTC_to_broker2);
-		assertEquals(addBtcOfBroker1, deductionBtcOfBroker2);
+
+		double DEE = Double.parseDouble(expectedfee);
+		if (DEE - Fee_for_diffrent_broker > 0.001) {
+			assertEquals(stringFee, expectedfee);
+		} else {
+			System.out.println("Pass because diffrence in inr is = " + (DEE - Fee_for_diffrent_broker));
+		}
+		if (Addition_of_BTC_to_broker1 - Deduction_of_BTC_to_broker2 > 0.00000001) {
+			assertEquals(addBtcOfBroker1, deductionBtcOfBroker2);
+		} else {
+			System.out.println(
+					"Pass because diffrence in btc is = " + (Addition_of_BTC_to_broker1 - Deduction_of_BTC_to_broker2));
+		}
+
 	}
 
 }

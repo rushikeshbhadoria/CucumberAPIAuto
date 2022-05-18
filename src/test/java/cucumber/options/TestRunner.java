@@ -10,11 +10,11 @@ import io.cucumber.testng.FeatureWrapper;
 import io.cucumber.testng.PickleWrapper;
 import io.cucumber.testng.TestNGCucumberRunner;
 
-@CucumberOptions(features = "src/test/java/demoFeature", glue = "stepDefinations", plugin = { "pretty",
+@CucumberOptions(features = "src/test/java/ETHfeature", glue = "stepDefinations", plugin = { "pretty",
 "json:target/cucumber.json" } , dryRun = false)
 public class TestRunner {
 	private TestNGCucumberRunner cucumberRunner;
-
+	
 	@BeforeClass(alwaysRun = true)
 	public void setUp() {
 		cucumberRunner = new TestNGCucumberRunner(this.getClass());
