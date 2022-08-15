@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Command line test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>9/7/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>19/17/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed May 18 15:00:20 IST 2022</td>
+<td>Started on:</td><td>Fri Jun 10 11:50:00 IST 2022</td>
 </tr>
-<tr><td>Total time:</td><td>176 seconds (176049 ms)</td>
+<tr><td>Total time:</td><td>536 seconds (536234 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,116 +75,336 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='cucumber.options.TestRunner.runScenario()'><b>runScenario</b><br>Test class: cucumber.options.TestRunner<br>Parameters: "Verify funds for diffrent broker in fulfilled case", "Verify funds for diffrent broker"</td>
-<td><div><pre>org.junit.ComparisonFailure: expected:&lt;2[.93999999761581]4&gt; but was:&lt;2[5.]4&gt;
-	at org.junit.Assert.assertEquals(Assert.java:117)
-	at org.junit.Assert.assertEquals(Assert.java:146)
-	at stepDefinations.SDplaceOrderofBroker1.calculate_fees_for_diffrent_broker(SDplaceOrderofBroker1.java:266)
-	at ?.Check fees &quot;25.4&quot; for diffrent broker(file:///C:/Users/Dell/eclipse_csk/CSXautomation2Optimision/src/test/java/ETHfeature/ETHINRdiffBrokerFunds2.feature:44)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1683617002", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1683617002'><pre>org.junit.ComparisonFailure: expected:&lt;2[.93999999761581]4&gt; but was:&lt;2[5.]4&gt;
-	at org.junit.Assert.assertEquals(Assert.java:117)
-	at org.junit.Assert.assertEquals(Assert.java:146)
-	at stepDefinations.SDplaceOrderofBroker1.calculate_fees_for_diffrent_broker(SDplaceOrderofBroker1.java:266)
-	at ?.Check fees &quot;25.4&quot; for diffrent broker(file:///C:/Users/Dell/eclipse_csk/CSXautomation2Optimision/src/test/java/ETHfeature/ETHINRdiffBrokerFunds2.feature:44)
+<td title='cucumber.options.TestRunner.runScenario()'><b>runScenario</b><br>Test class: cucumber.options.TestRunner<br>Parameters: "(placing BUY order first)Verify funds while when order moves in (open--->partially_decrement--->partially_fulfilled(fulfilled)) for diffrent brokers", "ETHINR Regression"</td>
+<td><div><pre>java.lang.AssertionError: expected:&lt;8.0&gt; but was:&lt;2.0&gt;
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:555)
+	at org.junit.Assert.assertEquals(Assert.java:685)
+	at stepDefinations.SDplaceOrderofBroker1.calculate_fees_for_diffrent_broker(SDplaceOrderofBroker1.java:310)
+	at ?.Check fees &quot;2&quot; for diffrent broker(file:///C:/Users/Dell/eclipse_csk/CSXautomation2Optimision/src/test/java/features/ETHINR.feature:399)
+</pre></div><a href='#' onClick='toggleBox("stack-trace83721081", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace83721081'><pre>java.lang.AssertionError: expected:&lt;8.0&gt; but was:&lt;2.0&gt;
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:555)
+	at org.junit.Assert.assertEquals(Assert.java:685)
+	at stepDefinations.SDplaceOrderofBroker1.calculate_fees_for_diffrent_broker(SDplaceOrderofBroker1.java:310)
+	at ?.Check fees &quot;2&quot; for diffrent broker(file:///C:/Users/Dell/eclipse_csk/CSXautomation2Optimision/src/test/java/features/ETHINR.feature:399)
 </pre></div></td>
-<td>22</td>
+<td>37</td>
 <td>cucumber.options.TestRunner@6497b078</td></tr>
 <tr>
-<td title='cucumber.options.TestRunner.runScenario()'><b>runScenario</b><br>Test class: cucumber.options.TestRunner<br>Parameters: "Verify funds for diffrent broker in partially fulfilled case", "Verify funds for diffrent broker"</td>
-<td><div><pre>org.junit.ComparisonFailure: expected:&lt;1[.4700000062584877]&gt; but was:&lt;1[2.9]&gt;
-	at org.junit.Assert.assertEquals(Assert.java:117)
-	at org.junit.Assert.assertEquals(Assert.java:146)
-	at stepDefinations.SDplaceOrderofBroker1.calculate_fees_for_diffrent_broker(SDplaceOrderofBroker1.java:266)
-	at ?.Check fees &quot;12.9&quot; for diffrent broker(file:///C:/Users/Dell/eclipse_csk/CSXautomation2Optimision/src/test/java/ETHfeature/ETHINRdiffBrokerFunds2.feature:86)
-</pre></div><a href='#' onClick='toggleBox("stack-trace171751994", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace171751994'><pre>org.junit.ComparisonFailure: expected:&lt;1[.4700000062584877]&gt; but was:&lt;1[2.9]&gt;
-	at org.junit.Assert.assertEquals(Assert.java:117)
-	at org.junit.Assert.assertEquals(Assert.java:146)
-	at stepDefinations.SDplaceOrderofBroker1.calculate_fees_for_diffrent_broker(SDplaceOrderofBroker1.java:266)
-	at ?.Check fees &quot;12.9&quot; for diffrent broker(file:///C:/Users/Dell/eclipse_csk/CSXautomation2Optimision/src/test/java/ETHfeature/ETHINRdiffBrokerFunds2.feature:86)
+<td title='cucumber.options.TestRunner.runScenario()'><b>runScenario</b><br>Test class: cucumber.options.TestRunner<br>Parameters: "(placing sell order first)Verify funds while when order moves in (open--->partially_decrement--->partially_fulfilled(fulfilled)) for diffrent brokers", "ETHINR Regression"</td>
+<td><div><pre>java.lang.AssertionError: expected:&lt;0.7999999970197678&gt; but was:&lt;2.0&gt;
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:555)
+	at org.junit.Assert.assertEquals(Assert.java:685)
+	at stepDefinations.SDplaceOrderofBroker1.calculate_fees_for_diffrent_broker(SDplaceOrderofBroker1.java:316)
+	at ?.Check fees &quot;2&quot; for diffrent broker(file:///C:/Users/Dell/eclipse_csk/CSXautomation2Optimision/src/test/java/features/ETHINR.feature:594)
+</pre></div><a href='#' onClick='toggleBox("stack-trace290932114", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace290932114'><pre>java.lang.AssertionError: expected:&lt;0.7999999970197678&gt; but was:&lt;2.0&gt;
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:555)
+	at org.junit.Assert.assertEquals(Assert.java:685)
+	at stepDefinations.SDplaceOrderofBroker1.calculate_fees_for_diffrent_broker(SDplaceOrderofBroker1.java:316)
+	at ?.Check fees &quot;2&quot; for diffrent broker(file:///C:/Users/Dell/eclipse_csk/CSXautomation2Optimision/src/test/java/features/ETHINR.feature:594)
 </pre></div></td>
-<td>20</td>
+<td>28</td>
 <td>cucumber.options.TestRunner@6497b078</td></tr>
 <tr>
-<td title='cucumber.options.TestRunner.runScenario()'><b>runScenario</b><br>Test class: cucumber.options.TestRunner<br>Parameters: "Verify funds for same broker in partially fulfilled case", "Verify funds for same broker"</td>
-<td><div><pre>org.junit.ComparisonFailure: expected:&lt;1.[469999998807907]&gt; but was:&lt;1.[5]&gt;
-	at org.junit.Assert.assertEquals(Assert.java:117)
-	at org.junit.Assert.assertEquals(Assert.java:146)
-	at stepDefinations.SDplaceOrderofBroker1.calculate_fees_for_same_broker(SDplaceOrderofBroker1.java:221)
-	at ?.Check fees &quot;1.5&quot; for same broker(file:///C:/Users/Dell/eclipse_csk/CSXautomation2Optimision/src/test/java/ETHfeature/ETHINRsameBrokerFunds.feature:61)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1805031342", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1805031342'><pre>org.junit.ComparisonFailure: expected:&lt;1.[469999998807907]&gt; but was:&lt;1.[5]&gt;
-	at org.junit.Assert.assertEquals(Assert.java:117)
-	at org.junit.Assert.assertEquals(Assert.java:146)
-	at stepDefinations.SDplaceOrderofBroker1.calculate_fees_for_same_broker(SDplaceOrderofBroker1.java:221)
-	at ?.Check fees &quot;1.5&quot; for same broker(file:///C:/Users/Dell/eclipse_csk/CSXautomation2Optimision/src/test/java/ETHfeature/ETHINRsameBrokerFunds.feature:61)
+<td title='cucumber.options.TestRunner.runScenario()'><b>runScenario</b><br>Test class: cucumber.options.TestRunner<br>Parameters: "Verify funds for diffrent broker in fulfilled case", "ETHINR Regression"</td>
+<td><div><pre>java.lang.AssertionError: expected:&lt;16.0&gt; but was:&lt;4.0&gt;
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:555)
+	at org.junit.Assert.assertEquals(Assert.java:685)
+	at stepDefinations.SDplaceOrderofBroker1.calculate_fees_for_diffrent_broker(SDplaceOrderofBroker1.java:310)
+	at ?.Check fees &quot;4&quot; for diffrent broker(file:///C:/Users/Dell/eclipse_csk/CSXautomation2Optimision/src/test/java/features/ETHINR.feature:116)
+</pre></div><a href='#' onClick='toggleBox("stack-trace5557427", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace5557427'><pre>java.lang.AssertionError: expected:&lt;16.0&gt; but was:&lt;4.0&gt;
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:555)
+	at org.junit.Assert.assertEquals(Assert.java:685)
+	at stepDefinations.SDplaceOrderofBroker1.calculate_fees_for_diffrent_broker(SDplaceOrderofBroker1.java:310)
+	at ?.Check fees &quot;4&quot; for diffrent broker(file:///C:/Users/Dell/eclipse_csk/CSXautomation2Optimision/src/test/java/features/ETHINR.feature:116)
 </pre></div></td>
-<td>13</td>
+<td>18</td>
 <td>cucumber.options.TestRunner@6497b078</td></tr>
 <tr>
-<td title='cucumber.options.TestRunner.runScenario()'><b>runScenario</b><br>Test class: cucumber.options.TestRunner<br>Parameters: "Verify funds for same broker in price improvement case", "Verify funds for same broker"</td>
-<td><div><pre>org.junit.ComparisonFailure: expected:&lt;[2.939999997615814]&gt; but was:&lt;[3.0]&gt;
-	at org.junit.Assert.assertEquals(Assert.java:117)
-	at org.junit.Assert.assertEquals(Assert.java:146)
-	at stepDefinations.SDplaceOrderofBroker1.calculate_fees_for_same_broker(SDplaceOrderofBroker1.java:221)
-	at ?.Check fees &quot;3.0&quot; for same broker(file:///C:/Users/Dell/eclipse_csk/CSXautomation2Optimision/src/test/java/ETHfeature/ETHINRsameBrokerFunds.feature:152)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1186361374", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1186361374'><pre>org.junit.ComparisonFailure: expected:&lt;[2.939999997615814]&gt; but was:&lt;[3.0]&gt;
-	at org.junit.Assert.assertEquals(Assert.java:117)
-	at org.junit.Assert.assertEquals(Assert.java:146)
-	at stepDefinations.SDplaceOrderofBroker1.calculate_fees_for_same_broker(SDplaceOrderofBroker1.java:221)
-	at ?.Check fees &quot;3.0&quot; for same broker(file:///C:/Users/Dell/eclipse_csk/CSXautomation2Optimision/src/test/java/ETHfeature/ETHINRsameBrokerFunds.feature:152)
+<td title='cucumber.options.TestRunner.runScenario()'><b>runScenario</b><br>Test class: cucumber.options.TestRunner<br>Parameters: "(placing BUY order first)Verify funds while when order moves in (open--->partially_fulfilled--->partially_decrement(fulfilled)) for diffrent brokers", "ETHINR Regression"</td>
+<td><div><pre>java.lang.AssertionError: expected:&lt;8.0&gt; but was:&lt;2.0&gt;
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:555)
+	at org.junit.Assert.assertEquals(Assert.java:685)
+	at stepDefinations.SDplaceOrderofBroker1.calculate_fees_for_diffrent_broker(SDplaceOrderofBroker1.java:310)
+	at ?.Check fees &quot;2&quot; for diffrent broker(file:///C:/Users/Dell/eclipse_csk/CSXautomation2Optimision/src/test/java/features/ETHINR.feature:448)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1630205062", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1630205062'><pre>java.lang.AssertionError: expected:&lt;8.0&gt; but was:&lt;2.0&gt;
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:555)
+	at org.junit.Assert.assertEquals(Assert.java:685)
+	at stepDefinations.SDplaceOrderofBroker1.calculate_fees_for_diffrent_broker(SDplaceOrderofBroker1.java:310)
+	at ?.Check fees &quot;2&quot; for diffrent broker(file:///C:/Users/Dell/eclipse_csk/CSXautomation2Optimision/src/test/java/features/ETHINR.feature:448)
 </pre></div></td>
-<td>13</td>
+<td>25</td>
 <td>cucumber.options.TestRunner@6497b078</td></tr>
 <tr>
-<td title='cucumber.options.TestRunner.runScenario()'><b>runScenario</b><br>Test class: cucumber.options.TestRunner<br>Parameters: "Verify funds for same broker in fulfilled case", "Verify funds for same broker"</td>
-<td><div><pre>org.junit.ComparisonFailure: expected:&lt;[2.939999997615814]&gt; but was:&lt;[3.0]&gt;
-	at org.junit.Assert.assertEquals(Assert.java:117)
-	at org.junit.Assert.assertEquals(Assert.java:146)
-	at stepDefinations.SDplaceOrderofBroker1.calculate_fees_for_same_broker(SDplaceOrderofBroker1.java:221)
-	at ?.Check fees &quot;3.0&quot; for same broker(file:///C:/Users/Dell/eclipse_csk/CSXautomation2Optimision/src/test/java/ETHfeature/ETHINRsameBrokerFunds.feature:31)
-</pre></div><a href='#' onClick='toggleBox("stack-trace504497704", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace504497704'><pre>org.junit.ComparisonFailure: expected:&lt;[2.939999997615814]&gt; but was:&lt;[3.0]&gt;
-	at org.junit.Assert.assertEquals(Assert.java:117)
-	at org.junit.Assert.assertEquals(Assert.java:146)
-	at stepDefinations.SDplaceOrderofBroker1.calculate_fees_for_same_broker(SDplaceOrderofBroker1.java:221)
-	at ?.Check fees &quot;3.0&quot; for same broker(file:///C:/Users/Dell/eclipse_csk/CSXautomation2Optimision/src/test/java/ETHfeature/ETHINRsameBrokerFunds.feature:31)
+<td title='cucumber.options.TestRunner.runScenario()'><b>runScenario</b><br>Test class: cucumber.options.TestRunner<br>Parameters: "(placing sell order first)Verify funds while when order moves in (open--->partially_fulfilled--->fulfilled) for diffrent brokers", "ETHINR Regression"</td>
+<td><div><pre>java.lang.AssertionError: expected:&lt;1.5999999940395355&gt; but was:&lt;4.0&gt;
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:555)
+	at org.junit.Assert.assertEquals(Assert.java:685)
+	at stepDefinations.SDplaceOrderofBroker1.calculate_fees_for_diffrent_broker(SDplaceOrderofBroker1.java:316)
+	at ?.Check fees &quot;4&quot; for diffrent broker(file:///C:/Users/Dell/eclipse_csk/CSXautomation2Optimision/src/test/java/features/ETHINR.feature:546)
+</pre></div><a href='#' onClick='toggleBox("stack-trace2019181911", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2019181911'><pre>java.lang.AssertionError: expected:&lt;1.5999999940395355&gt; but was:&lt;4.0&gt;
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:555)
+	at org.junit.Assert.assertEquals(Assert.java:685)
+	at stepDefinations.SDplaceOrderofBroker1.calculate_fees_for_diffrent_broker(SDplaceOrderofBroker1.java:316)
+	at ?.Check fees &quot;4&quot; for diffrent broker(file:///C:/Users/Dell/eclipse_csk/CSXautomation2Optimision/src/test/java/features/ETHINR.feature:546)
 </pre></div></td>
-<td>12</td>
+<td>18</td>
 <td>cucumber.options.TestRunner@6497b078</td></tr>
 <tr>
-<td title='cucumber.options.TestRunner.runScenario()'><b>runScenario</b><br>Test class: cucumber.options.TestRunner<br>Parameters: "Verify funds for same broker in BUYSELLBUY fulfilled case", "Verify funds for same broker"</td>
-<td><div><pre>org.junit.ComparisonFailure: expected:&lt;[3].0&gt; but was:&lt;[1].0&gt;
-	at org.junit.Assert.assertEquals(Assert.java:117)
-	at org.junit.Assert.assertEquals(Assert.java:146)
-	at stepDefinations.SDplaceOrderofBroker1.calculate_fees_for_same_broker(SDplaceOrderofBroker1.java:221)
-	at ?.Check fees &quot;1.0&quot; for same broker(file:///C:/Users/Dell/eclipse_csk/CSXautomation2Optimision/src/test/java/ETHfeature/ETHINRsameBrokerFunds.feature:189)
-</pre></div><a href='#' onClick='toggleBox("stack-trace265262373", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace265262373'><pre>org.junit.ComparisonFailure: expected:&lt;[3].0&gt; but was:&lt;[1].0&gt;
-	at org.junit.Assert.assertEquals(Assert.java:117)
-	at org.junit.Assert.assertEquals(Assert.java:146)
-	at stepDefinations.SDplaceOrderofBroker1.calculate_fees_for_same_broker(SDplaceOrderofBroker1.java:221)
-	at ?.Check fees &quot;1.0&quot; for same broker(file:///C:/Users/Dell/eclipse_csk/CSXautomation2Optimision/src/test/java/ETHfeature/ETHINRsameBrokerFunds.feature:189)
+<td title='cucumber.options.TestRunner.runScenario()'><b>runScenario</b><br>Test class: cucumber.options.TestRunner<br>Parameters: "(placing sell order first)Verify funds while when order moves in (open--->partially_fulfilled--->partially_decrement(fulfilled)) for diffrent brokers", "ETHINR Regression"</td>
+<td><div><pre>java.lang.AssertionError: expected:&lt;-4502.3499999940395&gt; but was:&lt;2.0&gt;
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:555)
+	at org.junit.Assert.assertEquals(Assert.java:685)
+	at stepDefinations.SDplaceOrderofBroker1.calculate_fees_for_diffrent_broker(SDplaceOrderofBroker1.java:316)
+	at ?.Check fees &quot;2&quot; for diffrent broker(file:///C:/Users/Dell/eclipse_csk/CSXautomation2Optimision/src/test/java/features/ETHINR.feature:642)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1920032353", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1920032353'><pre>java.lang.AssertionError: expected:&lt;-4502.3499999940395&gt; but was:&lt;2.0&gt;
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:555)
+	at org.junit.Assert.assertEquals(Assert.java:685)
+	at stepDefinations.SDplaceOrderofBroker1.calculate_fees_for_diffrent_broker(SDplaceOrderofBroker1.java:316)
+	at ?.Check fees &quot;2&quot; for diffrent broker(file:///C:/Users/Dell/eclipse_csk/CSXautomation2Optimision/src/test/java/features/ETHINR.feature:642)
 </pre></div></td>
-<td>13</td>
+<td>18</td>
 <td>cucumber.options.TestRunner@6497b078</td></tr>
 <tr>
-<td title='cucumber.options.TestRunner.runScenario()'><b>runScenario</b><br>Test class: cucumber.options.TestRunner<br>Parameters: "Verify funds for diffrent broker in price improvement case", "Verify funds for diffrent broker"</td>
-<td><div><pre>org.junit.ComparisonFailure: expected:&lt;2[.93999999761581]4&gt; but was:&lt;2[5.]4&gt;
-	at org.junit.Assert.assertEquals(Assert.java:117)
-	at org.junit.Assert.assertEquals(Assert.java:146)
-	at stepDefinations.SDplaceOrderofBroker1.calculate_fees_for_diffrent_broker(SDplaceOrderofBroker1.java:266)
-	at ?.Check fees &quot;25.4&quot; for diffrent broker(file:///C:/Users/Dell/eclipse_csk/CSXautomation2Optimision/src/test/java/ETHfeature/ETHINRdiffBrokerFunds2.feature:170)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1099892020", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1099892020'><pre>org.junit.ComparisonFailure: expected:&lt;2[.93999999761581]4&gt; but was:&lt;2[5.]4&gt;
-	at org.junit.Assert.assertEquals(Assert.java:117)
-	at org.junit.Assert.assertEquals(Assert.java:146)
-	at stepDefinations.SDplaceOrderofBroker1.calculate_fees_for_diffrent_broker(SDplaceOrderofBroker1.java:266)
-	at ?.Check fees &quot;25.4&quot; for diffrent broker(file:///C:/Users/Dell/eclipse_csk/CSXautomation2Optimision/src/test/java/ETHfeature/ETHINRdiffBrokerFunds2.feature:170)
+<td title='cucumber.options.TestRunner.runScenario()'><b>runScenario</b><br>Test class: cucumber.options.TestRunner<br>Parameters: "Verify funds for same broker in decremented case", "ETHINR Regression"</td>
+<td><div><pre>java.lang.AssertionError: expected:&lt;9.000082619605245E7&gt; but was:&lt;9.000082669605245E7&gt;
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:555)
+	at org.junit.Assert.assertEquals(Assert.java:685)
+	at stepDefinations.SDplaceOrderofBroker1.calculate_fees_for_same_broker(SDplaceOrderofBroker1.java:242)
+	at ?.Check fees &quot;0.0&quot; for same broker(file:///C:/Users/Dell/eclipse_csk/CSXautomation2Optimision/src/test/java/features/ETHINR.feature:740)
+</pre></div><a href='#' onClick='toggleBox("stack-trace187885955", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace187885955'><pre>java.lang.AssertionError: expected:&lt;9.000082619605245E7&gt; but was:&lt;9.000082669605245E7&gt;
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:555)
+	at org.junit.Assert.assertEquals(Assert.java:685)
+	at stepDefinations.SDplaceOrderofBroker1.calculate_fees_for_same_broker(SDplaceOrderofBroker1.java:242)
+	at ?.Check fees &quot;0.0&quot; for same broker(file:///C:/Users/Dell/eclipse_csk/CSXautomation2Optimision/src/test/java/features/ETHINR.feature:740)
 </pre></div></td>
-<td>20</td>
+<td>21</td>
+<td>cucumber.options.TestRunner@6497b078</td></tr>
+<tr>
+<td title='cucumber.options.TestRunner.runScenario()'><b>runScenario</b><br>Test class: cucumber.options.TestRunner<br>Parameters: "(placing buy order first)Verify funds while Updating the order and matching it with two counter orders", "ETHINR Regression"</td>
+<td><div><pre>org.junit.ComparisonFailure: expected:&lt;[PARTIALLY_FULFILLED]&gt; but was:&lt;[OPEN]&gt;
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at stepDefinations.SDplaceOrderofBroker1.verify_key_of_response(SDplaceOrderofBroker1.java:138)
+	at ?.Verify key &quot;data.status&quot; of response &quot;OPEN&quot;(file:///C:/Users/Dell/eclipse_csk/CSXautomation2Optimision/src/test/java/features/ETHINR.feature:1091)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1005591041", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1005591041'><pre>org.junit.ComparisonFailure: expected:&lt;[PARTIALLY_FULFILLED]&gt; but was:&lt;[OPEN]&gt;
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at stepDefinations.SDplaceOrderofBroker1.verify_key_of_response(SDplaceOrderofBroker1.java:138)
+	at ?.Verify key &quot;data.status&quot; of response &quot;OPEN&quot;(file:///C:/Users/Dell/eclipse_csk/CSXautomation2Optimision/src/test/java/features/ETHINR.feature:1091)
+</pre></div></td>
+<td>5</td>
+<td>cucumber.options.TestRunner@6497b078</td></tr>
+<tr>
+<td title='cucumber.options.TestRunner.runScenario()'><b>runScenario</b><br>Test class: cucumber.options.TestRunner<br>Parameters: "Verify funds for same broker in partially fulfilled case", "ETHINR Regression"</td>
+<td><div><pre>org.junit.ComparisonFailure: expected:&lt;[5005.0]&gt; but was:&lt;[1.5]&gt;
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at stepDefinations.SDplaceOrderofBroker1.calculate_fees_for_same_broker(SDplaceOrderofBroker1.java:232)
+	at ?.Check fees &quot;1.5&quot; for same broker(file:///C:/Users/Dell/eclipse_csk/CSXautomation2Optimision/src/test/java/features/ETHINR.feature:710)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1819326403", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1819326403'><pre>org.junit.ComparisonFailure: expected:&lt;[5005.0]&gt; but was:&lt;[1.5]&gt;
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at stepDefinations.SDplaceOrderofBroker1.calculate_fees_for_same_broker(SDplaceOrderofBroker1.java:232)
+	at ?.Check fees &quot;1.5&quot; for same broker(file:///C:/Users/Dell/eclipse_csk/CSXautomation2Optimision/src/test/java/features/ETHINR.feature:710)
+</pre></div></td>
+<td>19</td>
+<td>cucumber.options.TestRunner@6497b078</td></tr>
+<tr>
+<td title='cucumber.options.TestRunner.runScenario()'><b>runScenario</b><br>Test class: cucumber.options.TestRunner<br>Parameters: "Verify funds for diffrent broker in cancelled case", "ETHINR Regression"</td>
+<td><div><pre>java.lang.AssertionError: expected:&lt;10007.0&gt; but was:&lt;0.0&gt;
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:555)
+	at org.junit.Assert.assertEquals(Assert.java:685)
+	at stepDefinations.SDplaceOrderofBroker1.calculate_fees_for_diffrent_broker(SDplaceOrderofBroker1.java:310)
+	at ?.Check fees &quot;0.0&quot; for diffrent broker(file:///C:/Users/Dell/eclipse_csk/CSXautomation2Optimision/src/test/java/features/ETHINR.feature:202)
+</pre></div><a href='#' onClick='toggleBox("stack-trace787033725", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace787033725'><pre>java.lang.AssertionError: expected:&lt;10007.0&gt; but was:&lt;0.0&gt;
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:555)
+	at org.junit.Assert.assertEquals(Assert.java:685)
+	at stepDefinations.SDplaceOrderofBroker1.calculate_fees_for_diffrent_broker(SDplaceOrderofBroker1.java:310)
+	at ?.Check fees &quot;0.0&quot; for diffrent broker(file:///C:/Users/Dell/eclipse_csk/CSXautomation2Optimision/src/test/java/features/ETHINR.feature:202)
+</pre></div></td>
+<td>27</td>
+<td>cucumber.options.TestRunner@6497b078</td></tr>
+<tr>
+<td title='cucumber.options.TestRunner.runScenario()'><b>runScenario</b><br>Test class: cucumber.options.TestRunner<br>Parameters: "Verify funds for diffrent broker in partially fulfilled case", "ETHINR Regression"</td>
+<td><div><pre>java.lang.AssertionError: expected:&lt;5011.5&gt; but was:&lt;2.0&gt;
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:555)
+	at org.junit.Assert.assertEquals(Assert.java:685)
+	at stepDefinations.SDplaceOrderofBroker1.calculate_fees_for_diffrent_broker(SDplaceOrderofBroker1.java:310)
+	at ?.Check fees &quot;2&quot; for diffrent broker(file:///C:/Users/Dell/eclipse_csk/CSXautomation2Optimision/src/test/java/features/ETHINR.feature:159)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1861536737", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1861536737'><pre>java.lang.AssertionError: expected:&lt;5011.5&gt; but was:&lt;2.0&gt;
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:555)
+	at org.junit.Assert.assertEquals(Assert.java:685)
+	at stepDefinations.SDplaceOrderofBroker1.calculate_fees_for_diffrent_broker(SDplaceOrderofBroker1.java:310)
+	at ?.Check fees &quot;2&quot; for diffrent broker(file:///C:/Users/Dell/eclipse_csk/CSXautomation2Optimision/src/test/java/features/ETHINR.feature:159)
+</pre></div></td>
+<td>19</td>
+<td>cucumber.options.TestRunner@6497b078</td></tr>
+<tr>
+<td title='cucumber.options.TestRunner.runScenario()'><b>runScenario</b><br>Test class: cucumber.options.TestRunner<br>Parameters: "Verify funds for diffrent broker in price improvement case", "ETHINR Regression"</td>
+<td><div><pre>java.lang.AssertionError: expected:&lt;-9946.459999998566&gt; but was:&lt;4.0&gt;
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:555)
+	at org.junit.Assert.assertEquals(Assert.java:685)
+	at stepDefinations.SDplaceOrderofBroker1.calculate_fees_for_diffrent_broker(SDplaceOrderofBroker1.java:316)
+	at ?.Check fees &quot;4&quot; for diffrent broker(file:///C:/Users/Dell/eclipse_csk/CSXautomation2Optimision/src/test/java/features/ETHINR.feature:245)
+</pre></div><a href='#' onClick='toggleBox("stack-trace853913427", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace853913427'><pre>java.lang.AssertionError: expected:&lt;-9946.459999998566&gt; but was:&lt;4.0&gt;
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:555)
+	at org.junit.Assert.assertEquals(Assert.java:685)
+	at stepDefinations.SDplaceOrderofBroker1.calculate_fees_for_diffrent_broker(SDplaceOrderofBroker1.java:316)
+	at ?.Check fees &quot;4&quot; for diffrent broker(file:///C:/Users/Dell/eclipse_csk/CSXautomation2Optimision/src/test/java/features/ETHINR.feature:245)
+</pre></div></td>
+<td>23</td>
+<td>cucumber.options.TestRunner@6497b078</td></tr>
+<tr>
+<td title='cucumber.options.TestRunner.runScenario()'><b>runScenario</b><br>Test class: cucumber.options.TestRunner<br>Parameters: "(placing BUY order first)Verify funds while Updating the order and matching it with two counter orders with diffrent brokers", "ETHINR Regression"</td>
+<td><div><pre>java.lang.AssertionError: expected:&lt;16.0&gt; but was:&lt;4.0&gt;
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:555)
+	at org.junit.Assert.assertEquals(Assert.java:685)
+	at stepDefinations.SDplaceOrderofBroker1.calculate_fees_for_diffrent_broker(SDplaceOrderofBroker1.java:310)
+	at ?.Check fees &quot;4&quot; for diffrent broker(file:///C:/Users/Dell/eclipse_csk/CSXautomation2Optimision/src/test/java/features/ETHINR.feature:301)
+</pre></div><a href='#' onClick='toggleBox("stack-trace993023654", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace993023654'><pre>java.lang.AssertionError: expected:&lt;16.0&gt; but was:&lt;4.0&gt;
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:555)
+	at org.junit.Assert.assertEquals(Assert.java:685)
+	at stepDefinations.SDplaceOrderofBroker1.calculate_fees_for_diffrent_broker(SDplaceOrderofBroker1.java:310)
+	at ?.Check fees &quot;4&quot; for diffrent broker(file:///C:/Users/Dell/eclipse_csk/CSXautomation2Optimision/src/test/java/features/ETHINR.feature:301)
+</pre></div></td>
+<td>23</td>
+<td>cucumber.options.TestRunner@6497b078</td></tr>
+<tr>
+<td title='cucumber.options.TestRunner.runScenario()'><b>runScenario</b><br>Test class: cucumber.options.TestRunner<br>Parameters: "(placing buy order first)Verify funds while when order moves in (open--->partially_decrement--->decrement) for same broker", "ETHINR Regression"</td>
+<td><div><pre>java.lang.AssertionError: expected:&lt;9.000082669605245E7&gt; but was:&lt;9.000083369605245E7&gt;
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:555)
+	at org.junit.Assert.assertEquals(Assert.java:685)
+	at stepDefinations.SDplaceOrderofBroker1.calculate_fees_for_same_broker(SDplaceOrderofBroker1.java:242)
+	at ?.Check fees &quot;0.0&quot; for same broker(file:///C:/Users/Dell/eclipse_csk/CSXautomation2Optimision/src/test/java/features/ETHINR.feature:1182)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1699756582", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1699756582'><pre>java.lang.AssertionError: expected:&lt;9.000082669605245E7&gt; but was:&lt;9.000083369605245E7&gt;
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:555)
+	at org.junit.Assert.assertEquals(Assert.java:685)
+	at stepDefinations.SDplaceOrderofBroker1.calculate_fees_for_same_broker(SDplaceOrderofBroker1.java:242)
+	at ?.Check fees &quot;0.0&quot; for same broker(file:///C:/Users/Dell/eclipse_csk/CSXautomation2Optimision/src/test/java/features/ETHINR.feature:1182)
+</pre></div></td>
+<td>8</td>
+<td>cucumber.options.TestRunner@6497b078</td></tr>
+<tr>
+<td title='cucumber.options.TestRunner.runScenario()'><b>runScenario</b><br>Test class: cucumber.options.TestRunner<br>Parameters: "(placing BUY order first)Verify funds while when order moves in (open--->partially_fulfilled--->fulfilled) for diffrent brokers", "ETHINR Regression"</td>
+<td><div><pre>java.lang.AssertionError: expected:&lt;16.0&gt; but was:&lt;4.0&gt;
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:555)
+	at org.junit.Assert.assertEquals(Assert.java:685)
+	at stepDefinations.SDplaceOrderofBroker1.calculate_fees_for_diffrent_broker(SDplaceOrderofBroker1.java:310)
+	at ?.Check fees &quot;4&quot; for diffrent broker(file:///C:/Users/Dell/eclipse_csk/CSXautomation2Optimision/src/test/java/features/ETHINR.feature:350)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1534265514", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1534265514'><pre>java.lang.AssertionError: expected:&lt;16.0&gt; but was:&lt;4.0&gt;
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:555)
+	at org.junit.Assert.assertEquals(Assert.java:685)
+	at stepDefinations.SDplaceOrderofBroker1.calculate_fees_for_diffrent_broker(SDplaceOrderofBroker1.java:310)
+	at ?.Check fees &quot;4&quot; for diffrent broker(file:///C:/Users/Dell/eclipse_csk/CSXautomation2Optimision/src/test/java/features/ETHINR.feature:350)
+</pre></div></td>
+<td>17</td>
+<td>cucumber.options.TestRunner@6497b078</td></tr>
+<tr>
+<td title='cucumber.options.TestRunner.runScenario()'><b>runScenario</b><br>Test class: cucumber.options.TestRunner<br>Parameters: "(placing sell order first)Verify funds while Updating the order and matching it with two counter orders with diffrent brokers", "ETHINR Regression"</td>
+<td><div><pre>java.lang.AssertionError: expected:&lt;16.0&gt; but was:&lt;4.0&gt;
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:555)
+	at org.junit.Assert.assertEquals(Assert.java:685)
+	at stepDefinations.SDplaceOrderofBroker1.calculate_fees_for_diffrent_broker(SDplaceOrderofBroker1.java:310)
+	at ?.Check fees &quot;4&quot; for diffrent broker(file:///C:/Users/Dell/eclipse_csk/CSXautomation2Optimision/src/test/java/features/ETHINR.feature:498)
+</pre></div><a href='#' onClick='toggleBox("stack-trace421481829", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace421481829'><pre>java.lang.AssertionError: expected:&lt;16.0&gt; but was:&lt;4.0&gt;
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:555)
+	at org.junit.Assert.assertEquals(Assert.java:685)
+	at stepDefinations.SDplaceOrderofBroker1.calculate_fees_for_diffrent_broker(SDplaceOrderofBroker1.java:310)
+	at ?.Check fees &quot;4&quot; for diffrent broker(file:///C:/Users/Dell/eclipse_csk/CSXautomation2Optimision/src/test/java/features/ETHINR.feature:498)
+</pre></div></td>
+<td>14</td>
+<td>cucumber.options.TestRunner@6497b078</td></tr>
+<tr>
+<td title='cucumber.options.TestRunner.runScenario()'><b>runScenario</b><br>Test class: cucumber.options.TestRunner<br>Parameters: "(placing sell order first)Verify funds while when order moves in (open--->partially_decrement--->cancel(partially_cancelled)) for same broker", "ETHINR Regression"</td>
+<td><div><pre>java.lang.AssertionError: expected:&lt;9.000082669605245E7&gt; but was:&lt;9.000082169605245E7&gt;
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:555)
+	at org.junit.Assert.assertEquals(Assert.java:685)
+	at stepDefinations.SDplaceOrderofBroker1.calculate_fees_for_same_broker(SDplaceOrderofBroker1.java:246)
+	at ?.Check fees &quot;0.0&quot; for same broker(file:///C:/Users/Dell/eclipse_csk/CSXautomation2Optimision/src/test/java/features/ETHINR.feature:1067)
+</pre></div><a href='#' onClick='toggleBox("stack-trace481577519", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace481577519'><pre>java.lang.AssertionError: expected:&lt;9.000082669605245E7&gt; but was:&lt;9.000082169605245E7&gt;
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:555)
+	at org.junit.Assert.assertEquals(Assert.java:685)
+	at stepDefinations.SDplaceOrderofBroker1.calculate_fees_for_same_broker(SDplaceOrderofBroker1.java:246)
+	at ?.Check fees &quot;0.0&quot; for same broker(file:///C:/Users/Dell/eclipse_csk/CSXautomation2Optimision/src/test/java/features/ETHINR.feature:1067)
+</pre></div></td>
+<td>10</td>
 <td>cucumber.options.TestRunner@6497b078</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
@@ -195,49 +415,99 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='cucumber.options.TestRunner.runScenario()'><b>runScenario</b><br>Test class: cucumber.options.TestRunner<br>Parameters: "Verify Update Order api", "CSX Regression"</td>
+<td title='cucumber.options.TestRunner.runScenario()'><b>runScenario</b><br>Test class: cucumber.options.TestRunner<br>Parameters: "(placing sell order first)Verify funds while when order moves in (open--->partially_decrement--->partially_fulfilled(fulfilled)) for same broker", "ETHINR Regression"</td>
 <td></td>
-<td>3</td>
+<td>9</td>
 <td>cucumber.options.TestRunner@6497b078</td></tr>
 <tr>
-<td title='cucumber.options.TestRunner.runScenario()'><b>runScenario</b><br>Test class: cucumber.options.TestRunner<br>Parameters: "Verify funds for same broker in cancelled case", "Verify funds for same broker"</td>
+<td title='cucumber.options.TestRunner.runScenario()'><b>runScenario</b><br>Test class: cucumber.options.TestRunner<br>Parameters: "Verify funds for same broker in price improvement case", "ETHINR Regression"</td>
 <td></td>
 <td>14</td>
 <td>cucumber.options.TestRunner@6497b078</td></tr>
 <tr>
-<td title='cucumber.options.TestRunner.runScenario()'><b>runScenario</b><br>Test class: cucumber.options.TestRunner<br>Parameters: "Verify funds for diffrent broker in cancelled case", "Verify funds for diffrent broker"</td>
+<td title='cucumber.options.TestRunner.runScenario()'><b>runScenario</b><br>Test class: cucumber.options.TestRunner<br>Parameters: "Verify funds for same broker in fulfilled case", "ETHINR Regression"</td>
 <td></td>
-<td>20</td>
+<td>16</td>
 <td>cucumber.options.TestRunner@6497b078</td></tr>
 <tr>
-<td title='cucumber.options.TestRunner.runScenario()'><b>runScenario</b><br>Test class: cucumber.options.TestRunner<br>Parameters: "Verify Add IP and delete IP", "CSX Regression"</td>
+<td title='cucumber.options.TestRunner.runScenario()'><b>runScenario</b><br>Test class: cucumber.options.TestRunner<br>Parameters: "(placing buy order first)Verify funds while when order moves in (open--->partially_fulfilled--->fulfilled) for same broker", "ETHINR Regression"</td>
+<td></td>
+<td>9</td>
+<td>cucumber.options.TestRunner@6497b078</td></tr>
+<tr>
+<td title='cucumber.options.TestRunner.runScenario()'><b>runScenario</b><br>Test class: cucumber.options.TestRunner<br>Parameters: "(placing buy order first)Verify funds while when order moves in (open--->partially_fulfilled--->partially_decrement(fulfilled)) for same broker", "ETHINR Regression"</td>
+<td></td>
+<td>9</td>
+<td>cucumber.options.TestRunner@6497b078</td></tr>
+<tr>
+<td title='cucumber.options.TestRunner.runScenario()'><b>runScenario</b><br>Test class: cucumber.options.TestRunner<br>Parameters: "Verify funds for same broker in cancelled case", "ETHINR Regression"</td>
+<td></td>
+<td>8</td>
+<td>cucumber.options.TestRunner@6497b078</td></tr>
+<tr>
+<td title='cucumber.options.TestRunner.runScenario()'><b>runScenario</b><br>Test class: cucumber.options.TestRunner<br>Parameters: "Verify CancelAllOrder", "ETHINR Regression"</td>
 <td></td>
 <td>1</td>
 <td>cucumber.options.TestRunner@6497b078</td></tr>
 <tr>
-<td title='cucumber.options.TestRunner.runScenario()'><b>runScenario</b><br>Test class: cucumber.options.TestRunner<br>Parameters: "Verify place order , get order  and cancel order api", "CSX Regression"</td>
+<td title='cucumber.options.TestRunner.runScenario()'><b>runScenario</b><br>Test class: cucumber.options.TestRunner<br>Parameters: "(placing buy order first)Verify funds while when order moves in (open--->partially_decrement--->partially_fulfilled(fulfilled)) for same broker", "ETHINR Regression"</td>
+<td></td>
+<td>8</td>
+<td>cucumber.options.TestRunner@6497b078</td></tr>
+<tr>
+<td title='cucumber.options.TestRunner.runScenario()'><b>runScenario</b><br>Test class: cucumber.options.TestRunner<br>Parameters: "(placing buy order first)Verify funds while when order moves in (open--->partially_decrement--->cancel(partially_cancelled)) for same broker", "ETHINR Regression"</td>
+<td></td>
+<td>23</td>
+<td>cucumber.options.TestRunner@6497b078</td></tr>
+<tr>
+<td title='cucumber.options.TestRunner.runScenario()'><b>runScenario</b><br>Test class: cucumber.options.TestRunner<br>Parameters: "Verify funds for same broker in BUYSELLBUY fulfilled case", "ETHINR Regression"</td>
+<td></td>
+<td>16</td>
+<td>cucumber.options.TestRunner@6497b078</td></tr>
+<tr>
+<td title='cucumber.options.TestRunner.runScenario()'><b>runScenario</b><br>Test class: cucumber.options.TestRunner<br>Parameters: "Verify place order , get order  and cancel order api", "ETHINR Regression"</td>
+<td></td>
+<td>5</td>
+<td>cucumber.options.TestRunner@6497b078</td></tr>
+<tr>
+<td title='cucumber.options.TestRunner.runScenario()'><b>runScenario</b><br>Test class: cucumber.options.TestRunner<br>Parameters: "(placing sell order first)Verify funds while when order moves in (open--->partially_fulfilled--->fulfilled) for same broker", "ETHINR Regression"</td>
+<td></td>
+<td>23</td>
+<td>cucumber.options.TestRunner@6497b078</td></tr>
+<tr>
+<td title='cucumber.options.TestRunner.runScenario()'><b>runScenario</b><br>Test class: cucumber.options.TestRunner<br>Parameters: "(placing sell order first)Verify funds while when order moves in (open--->partially_decrement--->decrement) for same broker", "ETHINR Regression"</td>
+<td></td>
+<td>23</td>
+<td>cucumber.options.TestRunner@6497b078</td></tr>
+<tr>
+<td title='cucumber.options.TestRunner.runScenario()'><b>runScenario</b><br>Test class: cucumber.options.TestRunner<br>Parameters: "Verify Add IP and delete IP", "ETHINR Regression"</td>
 <td></td>
 <td>2</td>
 <td>cucumber.options.TestRunner@6497b078</td></tr>
 <tr>
-<td title='cucumber.options.TestRunner.runScenario()'><b>runScenario</b><br>Test class: cucumber.options.TestRunner<br>Parameters: "Verify GetAllIps", "CSX Regression"</td>
+<td title='cucumber.options.TestRunner.runScenario()'><b>runScenario</b><br>Test class: cucumber.options.TestRunner<br>Parameters: "Verify GetAllIps", "ETHINR Regression"</td>
 <td></td>
 <td>0</td>
 <td>cucumber.options.TestRunner@6497b078</td></tr>
 <tr>
-<td title='cucumber.options.TestRunner.runScenario()'><b>runScenario</b><br>Test class: cucumber.options.TestRunner<br>Parameters: "Verify GetAllOrder", "CSX Regression"</td>
+<td title='cucumber.options.TestRunner.runScenario()'><b>runScenario</b><br>Test class: cucumber.options.TestRunner<br>Parameters: "Verify Update Order api", "ETHINR Regression"</td>
+<td></td>
+<td>3</td>
+<td>cucumber.options.TestRunner@6497b078</td></tr>
+<tr>
+<td title='cucumber.options.TestRunner.runScenario()'><b>runScenario</b><br>Test class: cucumber.options.TestRunner<br>Parameters: "Verify GetAllOrder", "ETHINR Regression"</td>
 <td></td>
 <td>0</td>
 <td>cucumber.options.TestRunner@6497b078</td></tr>
 <tr>
-<td title='cucumber.options.TestRunner.runScenario()'><b>runScenario</b><br>Test class: cucumber.options.TestRunner<br>Parameters: "Verify CancelAllOrder", "CSX Regression"</td>
+<td title='cucumber.options.TestRunner.runScenario()'><b>runScenario</b><br>Test class: cucumber.options.TestRunner<br>Parameters: "(placing sell order first)Verify funds while Updating the order and matching it with two counter orders", "ETHINR Regression"</td>
 <td></td>
-<td>0</td>
+<td>10</td>
 <td>cucumber.options.TestRunner@6497b078</td></tr>
 <tr>
-<td title='cucumber.options.TestRunner.runScenario()'><b>runScenario</b><br>Test class: cucumber.options.TestRunner<br>Parameters: "Verify funds for same broker in decremented case", "Verify funds for same broker"</td>
+<td title='cucumber.options.TestRunner.runScenario()'><b>runScenario</b><br>Test class: cucumber.options.TestRunner<br>Parameters: "(placing sell order first)Verify funds while when order moves in (open--->partially_fulfilled--->partially_decrement(fulfilled)) for same broker", "ETHINR Regression"</td>
 <td></td>
-<td>12</td>
+<td>9</td>
 <td>cucumber.options.TestRunner@6497b078</td></tr>
 </table><p>
 </body>

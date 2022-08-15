@@ -1,4 +1,4 @@
-Feature: CSX Regression
+Feature: SHIBINR Regression
 
   @PlaceGetDeleteOrder @Regression @SHIB
   Scenario Outline: Verify place order , get order  and cancel order api
@@ -17,17 +17,17 @@ Feature: CSX Regression
 
     Examples: 
       | type  | side | instrument | quantityType | quantity | limitPrice | username |
-      | limit | BUY  | SHIB/INR    | QUOTE        |    10000 |        102 | user1    |
+      | limit | BUY  | SHIB/INR    | QUOTE        |    10000 |        1000 | user1    |
 
   @UpdateOrder @Regression @SHIB
   Scenario: Verify Update Order api
-    Given Placing an order for broker "B2" of type "limit" side "BUY" instrument "SHIB/INR" quantityType "QUOTE" quantity "10000" limitPrice "102" username "user1"
+    Given Placing an order for broker "B2" of type "limit" side "BUY" instrument "SHIB/INR" quantityType "QUOTE" quantity "10000" limitPrice "1000" username "user1"
     When Providing request PathUrl "PlaceOrder" with method "POST"
     Then I verify the  "200" in step
     And Verify key "message" of response "Order placed successfully"
     And Verify the "data.orderID" of response "GetOrder"
     And Verify key "data.status" of response "OPEN"
-    Given Update an order for broker "B2" of  instrument "SHIB/INR" quantityType "QUOTE" quantity "103.5" limitPrice "103" username "user1" orderType "LIMIT"
+    Given Update an order for broker "B2" of  instrument "SHIB/INR" quantityType "QUOTE" quantity "2000" limitPrice "103" username "user1" orderType "LIMIT"
     When Providing request PathUrl "PlaceOrder" with method "PATCH"
     Then I verify the  "200" in step
     And Verify key "message" of response "Order updated successfully"
@@ -81,7 +81,7 @@ Feature: CSX Regression
     Given loading the header for broker "B2"
     Given take balance of "INR" with api "Getbalance" with name "s1b2inr"
     Given take balance of "SHIB" with api "Getbalance" with name "s1b2btc"
-    Given Placing an order for broker "B1" of type "limit" side "BUY" instrument "SHIB/INR" quantityType "QUOTE" quantity "10000" limitPrice "3500000" username "user1"
+    Given Placing an order for broker "B1" of type "limit" side "BUY" instrument "SHIB/INR" quantityType "QUOTE" quantity "10000" limitPrice "0.003" username "user1"
     When Providing request PathUrl "PlaceOrder" with method "POST"
     Then I verify the  "200" in step
     And Verify key "message" of response "Order placed successfully"
@@ -94,7 +94,7 @@ Feature: CSX Regression
     Given loading the header for broker "B2"
     Given take balance of "INR" with api "Getbalance" with name "s2b2inr"
     Given take balance of "SHIB" with api "Getbalance" with name "s2b2btc"
-    Given Placing an order for broker "B2" of type "limit" side "SELL" instrument "SHIB/INR" quantityType "QUOTE" quantity "10000" limitPrice "3500000" username "user1"
+    Given Placing an order for broker "B2" of type "limit" side "SELL" instrument "SHIB/INR" quantityType "QUOTE" quantity "10000" limitPrice "0.003" username "user1"
     When Providing request PathUrl "PlaceOrder" with method "POST"
     Then I verify the  "200" in step
     And Verify key "message" of response "Order placed successfully"
@@ -124,7 +124,7 @@ Feature: CSX Regression
     Given loading the header for broker "B2"
     Given take balance of "INR" with api "Getbalance" with name "s1b2inr"
     Given take balance of "SHIB" with api "Getbalance" with name "s1b2btc"
-    Given Placing an order for broker "B1" of type "limit" side "BUY" instrument "SHIB/INR" quantityType "QUOTE" quantity "10000" limitPrice "3500000" username "user1"
+    Given Placing an order for broker "B1" of type "limit" side "BUY" instrument "SHIB/INR" quantityType "QUOTE" quantity "10000" limitPrice "0.003" username "user1"
     When Providing request PathUrl "PlaceOrder" with method "POST"
     Then I verify the  "200" in step
     And Verify key "message" of response "Order placed successfully"
@@ -137,7 +137,7 @@ Feature: CSX Regression
     Given loading the header for broker "B2"
     Given take balance of "INR" with api "Getbalance" with name "s2b2inr"
     Given take balance of "SHIB" with api "Getbalance" with name "s2b2btc"
-    Given Placing an order for broker "B2" of type "limit" side "SELL" instrument "SHIB/INR" quantityType "QUOTE" quantity "5000" limitPrice "3500000" username "user1"
+    Given Placing an order for broker "B2" of type "limit" side "SELL" instrument "SHIB/INR" quantityType "QUOTE" quantity "5000" limitPrice "0.003" username "user1"
     When Providing request PathUrl "PlaceOrder" with method "POST"
     Then I verify the  "200" in step
     And Verify key "message" of response "Order placed successfully"
@@ -167,7 +167,7 @@ Feature: CSX Regression
     Given loading the header for broker "B2"
     Given take balance of "INR" with api "Getbalance" with name "s1b2inr"
     Given take balance of "SHIB" with api "Getbalance" with name "s1b2btc"
-    Given Placing an order for broker "B1" of type "limit" side "BUY" instrument "SHIB/INR" quantityType "QUOTE" quantity "10000" limitPrice "3500000" username "user1"
+    Given Placing an order for broker "B1" of type "limit" side "BUY" instrument "SHIB/INR" quantityType "QUOTE" quantity "10000" limitPrice "0.003" username "user1"
     When Providing request PathUrl "PlaceOrder" with method "POST"
     Then I verify the  "200" in step
     And Verify key "message" of response "Order placed successfully"
@@ -210,7 +210,7 @@ Feature: CSX Regression
     Given loading the header for broker "B2"
     Given take balance of "INR" with api "Getbalance" with name "s1b2inr"
     Given take balance of "SHIB" with api "Getbalance" with name "s1b2btc"
-    Given Placing an order for broker "B1" of type "limit" side "BUY" instrument "SHIB/INR" quantityType "QUOTE" quantity "10000" limitPrice "3500000" username "user1"
+    Given Placing an order for broker "B1" of type "limit" side "BUY" instrument "SHIB/INR" quantityType "QUOTE" quantity "10000" limitPrice "0.003" username "user1"
     When Providing request PathUrl "PlaceOrder" with method "POST"
     Then I verify the  "200" in step
     And Verify key "message" of response "Order placed successfully"
@@ -223,7 +223,7 @@ Feature: CSX Regression
     Given loading the header for broker "B2"
     Given take balance of "INR" with api "Getbalance" with name "s2b2inr"
     Given take balance of "SHIB" with api "Getbalance" with name "s2b2btc"
-    Given Placing an order for broker "B2" of type "limit" side "SELL" instrument "SHIB/INR" quantityType "QUOTE" quantity "5000" limitPrice "1750000" username "user1"
+    Given Placing an order for broker "B2" of type "limit" side "SELL" instrument "SHIB/INR" quantityType "QUOTE" quantity "5000" limitPrice "0.0015" username "user1"
     When Providing request PathUrl "PlaceOrder" with method "POST"
     Then I verify the  "200" in step
     And Verify key "message" of response "Order placed successfully"
@@ -250,7 +250,7 @@ Feature: CSX Regression
     Given loading the header for broker "B1"
     Given take balance of "INR" with api "Getbalance" with name "s1b1inr"
     Given take balance of "SHIB" with api "Getbalance" with name "s1b1btc"
-    Given Placing an order for broker "B1" of type "limit" side "BUY" instrument "SHIB/INR" quantityType "QUOTE" quantity "10000" limitPrice "3500000" username "user1"
+    Given Placing an order for broker "B1" of type "limit" side "BUY" instrument "SHIB/INR" quantityType "QUOTE" quantity "10000" limitPrice "0.003" username "user1"
     When Providing request PathUrl "PlaceOrder" with method "POST"
     Then I verify the  "200" in step
     And Verify key "message" of response "Order placed successfully"
@@ -261,7 +261,7 @@ Feature: CSX Regression
     Given take balance of "INR" with api "Getbalance" with name "s2b1inr"
     Given take balance of "SHIB" with api "Getbalance" with name "s2b1btc"
     #placing 2nd order for matching
-    Given Placing an order for broker "B1" of type "limit" side "SELL" instrument "SHIB/INR" quantityType "QUOTE" quantity "10000" limitPrice "3500000" username "user2"
+    Given Placing an order for broker "B1" of type "limit" side "SELL" instrument "SHIB/INR" quantityType "QUOTE" quantity "10000" limitPrice "0.003" username "user2"
     When Providing request PathUrl "PlaceOrder" with method "POST"
     Then I verify the  "200" in step
     And Verify key "message" of response "Order placed successfully"
@@ -280,7 +280,7 @@ Feature: CSX Regression
     Given loading the header for broker "B1"
     Given take balance of "INR" with api "Getbalance" with name "s1b1inr"
     Given take balance of "SHIB" with api "Getbalance" with name "s1b1btc"
-    Given Placing an order for broker "B1" of type "limit" side "BUY" instrument "SHIB/INR" quantityType "QUOTE" quantity "10000" limitPrice "3500000" username "user1"
+    Given Placing an order for broker "B1" of type "limit" side "BUY" instrument "SHIB/INR" quantityType "QUOTE" quantity "10000" limitPrice "0.003" username "user1"
     When Providing request PathUrl "PlaceOrder" with method "POST"
     Then I verify the  "200" in step
     And Verify key "message" of response "Order placed successfully"
@@ -291,7 +291,7 @@ Feature: CSX Regression
     Given take balance of "INR" with api "Getbalance" with name "s2b1inr"
     Given take balance of "SHIB" with api "Getbalance" with name "s2b1btc"
     #placing 2nd order for matching
-    Given Placing an order for broker "B1" of type "limit" side "SELL" instrument "SHIB/INR" quantityType "QUOTE" quantity "5000" limitPrice "3500000" username "user2"
+    Given Placing an order for broker "B1" of type "limit" side "SELL" instrument "SHIB/INR" quantityType "QUOTE" quantity "5000" limitPrice "0.0015" username "user2"
     When Providing request PathUrl "PlaceOrder" with method "POST"
     Then I verify the  "200" in step
     And Verify key "message" of response "Order placed successfully"
@@ -310,7 +310,7 @@ Feature: CSX Regression
     Given loading the header for broker "B1"
     Given take balance of "INR" with api "Getbalance" with name "s1b1inr"
     Given take balance of "SHIB" with api "Getbalance" with name "s1b1btc"
-    Given Placing an order for broker "B1" of type "limit" side "BUY" instrument "SHIB/INR" quantityType "QUOTE" quantity "10000" limitPrice "3500000" username "user1"
+    Given Placing an order for broker "B1" of type "limit" side "BUY" instrument "SHIB/INR" quantityType "QUOTE" quantity "10000" limitPrice "0.003" username "user1"
     When Providing request PathUrl "PlaceOrder" with method "POST"
     Then I verify the  "200" in step
     And Verify key "message" of response "Order placed successfully"
@@ -321,7 +321,7 @@ Feature: CSX Regression
     Given take balance of "INR" with api "Getbalance" with name "s2b1inr"
     Given take balance of "SHIB" with api "Getbalance" with name "s2b1btc"
     #placing 2nd order for matching
-    Given Placing an order for broker "B1" of type "limit" side "SELL" instrument "SHIB/INR" quantityType "QUOTE" quantity "10000" limitPrice "3500000" username "user1"
+    Given Placing an order for broker "B1" of type "limit" side "SELL" instrument "SHIB/INR" quantityType "QUOTE" quantity "10000" limitPrice "0.003" username "user1"
     When Providing request PathUrl "PlaceOrder" with method "POST"
     Then I verify the  "200" in step
     And Verify key "message" of response "Order placed successfully"
@@ -340,7 +340,7 @@ Feature: CSX Regression
     Given loading the header for broker "B1"
     Given take balance of "INR" with api "Getbalance" with name "s1b1inr"
     Given take balance of "SHIB" with api "Getbalance" with name "s1b1btc"
-    Given Placing an order for broker "B1" of type "limit" side "BUY" instrument "SHIB/INR" quantityType "QUOTE" quantity "10000" limitPrice "3500000" username "user1"
+    Given Placing an order for broker "B1" of type "limit" side "BUY" instrument "SHIB/INR" quantityType "QUOTE" quantity "10000" limitPrice "0.003" username "user1"
     When Providing request PathUrl "PlaceOrder" with method "POST"
     Then I verify the  "200" in step
     And Verify key "message" of response "Order placed successfully"
@@ -351,7 +351,7 @@ Feature: CSX Regression
     Given take balance of "INR" with api "Getbalance" with name "s2b1inr"
     Given take balance of "SHIB" with api "Getbalance" with name "s2b1btc"
     #placing 2nd order for matching
-    Given Placing an order for broker "B1" of type "limit" side "SELL" instrument "SHIB/INR" quantityType "QUOTE" quantity "10000" limitPrice "3600000" username "user2"
+    Given Placing an order for broker "B1" of type "limit" side "SELL" instrument "SHIB/INR" quantityType "QUOTE" quantity "10000" limitPrice "0.004" username "user2"
     When Providing request PathUrl "PlaceOrder" with method "POST"
     Then I verify the  "200" in step
     And Verify key "message" of response "Order placed successfully"
@@ -370,7 +370,7 @@ Feature: CSX Regression
     Given loading the header for broker "B1"
     Given take balance of "INR" with api "Getbalance" with name "s1b1inr"
     Given take balance of "SHIB" with api "Getbalance" with name "s1b1btc"
-    Given Placing an order for broker "B1" of type "limit" side "BUY" instrument "SHIB/INR" quantityType "QUOTE" quantity "10000" limitPrice "3500000" username "user1"
+    Given Placing an order for broker "B1" of type "limit" side "BUY" instrument "SHIB/INR" quantityType "QUOTE" quantity "10000" limitPrice "0.003" username "user1"
     When Providing request PathUrl "PlaceOrder" with method "POST"
     Then I verify the  "200" in step
     And Verify key "message" of response "Order placed successfully"
@@ -381,7 +381,7 @@ Feature: CSX Regression
     Given take balance of "INR" with api "Getbalance" with name "s2b1inr"
     Given take balance of "SHIB" with api "Getbalance" with name "s2b1btc"
     #placing 2nd order for matching
-    Given Placing an order for broker "B1" of type "limit" side "SELL" instrument "SHIB/INR" quantityType "QUOTE" quantity "5000" limitPrice "1750000" username "user2"
+    Given Placing an order for broker "B1" of type "limit" side "SELL" instrument "SHIB/INR" quantityType "QUOTE" quantity "5000" limitPrice "0.0015" username "user2"
     When Providing request PathUrl "PlaceOrder" with method "POST"
     Then I verify the  "200" in step
     And Verify key "message" of response "Order placed successfully"
@@ -400,7 +400,7 @@ Feature: CSX Regression
     Given loading the header for broker "B1"
     Given take balance of "INR" with api "Getbalance" with name "s1b1inr"
     Given take balance of "SHIB" with api "Getbalance" with name "s1b1btc"
-    Given Placing an order for broker "B1" of type "limit" side "BUY" instrument "SHIB/INR" quantityType "quote" quantity "5000.06" limitPrice "49" username "user1"
+    Given Placing an order for broker "B1" of type "limit" side "BUY" instrument "SHIB/INR" quantityType "quote" quantity "5000.06" limitPrice "0.003" username "user1"
     When Providing request PathUrl "PlaceOrder" with method "POST"
     Then I verify the  "200" in step
     And Verify key "message" of response "Order placed successfully"
@@ -411,14 +411,14 @@ Feature: CSX Regression
     Given take balance of "INR" with api "Getbalance" with name "s2b1inr"
     Given take balance of "SHIB" with api "Getbalance" with name "s2b1btc"
     #placing 2nd order for matching
-    Given Placing an order for broker "B1" of type "limit" side "SELL" instrument "SHIB/INR" quantityType "quote" quantity "10000.12" limitPrice "49" username "user"
+    Given Placing an order for broker "B1" of type "limit" side "SELL" instrument "SHIB/INR" quantityType "quote" quantity "10000.12" limitPrice "0.0015" username "user"
     When Providing request PathUrl "PlaceOrder" with method "POST"
     Then I verify the  "200" in step
     Then give sleep of "2000"
     And Verify key "message" of response "Order placed successfully"
     And Verify the "data.orderID" of response "GetOrder"
     And Verify key "data.status" of response "PARTIALLY_FULFILLED"
-    Given Placing an order for broker "B1" of type "limit" side "BUY" instrument "SHIB/INR" quantityType "quote" quantity "5000.06" limitPrice "49" username "user2"
+    Given Placing an order for broker "B1" of type "limit" side "BUY" instrument "SHIB/INR" quantityType "quote" quantity "5000.06" limitPrice "0.0015" username "user2"
     When Providing request PathUrl "PlaceOrder" with method "POST"
     Then I verify the  "200" in step
     And Verify key "message" of response "Order placed successfully"

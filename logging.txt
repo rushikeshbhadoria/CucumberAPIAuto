@@ -1,5 +1,5 @@
-Request method:	GET
-Request URI:	https://k8s-cskdev-cdfb21ffcd-1502641994.ap-south-1.elb.amazonaws.com/api/v1/me/balance/?asset=INR
+Request method:	POST
+Request URI:	https://k8s-cskdev-cdfb21ffcd-1502641994.ap-south-1.elb.amazonaws.com/api/v1/orders/
 Proxy:			<none>
 Request params:	<none>
 Query params:	<none>
@@ -7,54 +7,47 @@ Form params:	<none>
 Path params:	<none>
 Headers:		CSX-ACCESS-KEY=8bf9ff80fa1691087e8292ee9340509993f7ce91ec0b6ce207902e4b3ad11b88
 				CSX-SIGNATURE=a62c54312705a0e518223d92009b5da3af20e0cf395d9827b8b8697be7bffc2b
-				csx-access-timestamp=1652872164
+				csx-access-timestamp=1656652052
 				Accept=application/json
 				Content-Type=application/json
 Cookies:		<none>
 Multiparts:		<none>
-Body:			<none>
-HTTP/1.1 200 OK
-Date: Wed, 18 May 2022 11:09:24 GMT
-Content-Type: application/json
-Content-Length: 81
-Connection: keep-alive
-access-control-allow-origin: *
-x-envoy-upstream-service-time: 231
-server: envoy
-
+Body:
 {
-    "data": {
-        "balance": "129736495.059297"
-    },
-    "message": "Balance fetched successfully"
+    "type": "limit",
+    "side": "BUY",
+    "instrument": "USDT/INR",
+    "quantityType": "QUOTE",
+    "quantity": 10000,
+    "limitPrice": "3500000",
+    "username": "user1"
 }
-Request method:	GET
-Request URI:	https://k8s-cskdev-cdfb21ffcd-1502641994.ap-south-1.elb.amazonaws.com/api/v1/me/balance/?asset=INR
-Proxy:			<none>
-Request params:	<none>
-Query params:	asset=INR
-Form params:	<none>
-Path params:	<none>
-Headers:		CSX-ACCESS-KEY=8bf9ff80fa1691087e8292ee9340509993f7ce91ec0b6ce207902e4b3ad11b88
-				CSX-SIGNATURE=a62c54312705a0e518223d92009b5da3af20e0cf395d9827b8b8697be7bffc2b
-				csx-access-timestamp=1652872164
-				Accept=application/json
-				Content-Type=application/json
-Cookies:		<none>
-Multiparts:		<none>
-Body:			<none>
 HTTP/1.1 200 OK
-Date: Wed, 18 May 2022 11:09:25 GMT
+Date: Fri, 01 Jul 2022 05:07:33 GMT
 Content-Type: application/json
-Content-Length: 79
+Content-Length: 434
 Connection: keep-alive
 access-control-allow-origin: *
-x-envoy-upstream-service-time: 219
+x-envoy-upstream-service-time: 392
 server: envoy
 
 {
     "data": {
-        "balance": "90000909.47303"
+        "average_price": "0",
+        "brokerId": "97c02e87-a473-414b-9d27-78764a93d439",
+        "created_at": "2022-07-01T05:07:33.588Z",
+        "filledQuantity": 0,
+        "instrument": "USDT/INR",
+        "limit_price": "3500000",
+        "makerFee": "-0.04",
+        "orderId": "d75ab35b-dd6f-4d98-ac46-f515579f6398",
+        "orderType": "",
+        "quantity": "0.0028",
+        "quantityType": "",
+        "side": "BUY",
+        "status": "OPEN",
+        "takerFee": "0.07",
+        "updated_at": "2022-07-01T05:07:33.588Z"
     },
-    "message": "Balance fetched successfully"
+    "message": "Order placed successfully"
 }

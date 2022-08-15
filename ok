@@ -1,0 +1,1 @@
+select * from orders where instrument='ETH/INR' status in ('OPEN','PARTIALLY_FULFILLED') order by created_at desc

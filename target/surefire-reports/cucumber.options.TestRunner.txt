@@ -1,53 +1,153 @@
 -------------------------------------------------------------------------------
 Test set: cucumber.options.TestRunner
 -------------------------------------------------------------------------------
-Tests run: 16, Failures: 7, Errors: 0, Skipped: 0, Time elapsed: 177.438 sec <<< FAILURE!
-runScenario(cucumber.options.TestRunner)  Time elapsed: 22.861 sec  <<< FAILURE!
-org.junit.ComparisonFailure: expected:<2[.93999999761581]4> but was:<2[5.]4>
-	at org.junit.Assert.assertEquals(Assert.java:117)
-	at org.junit.Assert.assertEquals(Assert.java:146)
-	at stepDefinations.SDplaceOrderofBroker1.calculate_fees_for_diffrent_broker(SDplaceOrderofBroker1.java:266)
-	at ?.Check fees "25.4" for diffrent broker(file:///C:/Users/Dell/eclipse_csk/CSXautomation2Optimision/src/test/java/ETHfeature/ETHINRdiffBrokerFunds2.feature:44)
+Tests run: 36, Failures: 17, Errors: 0, Skipped: 0, Time elapsed: 538.033 sec <<< FAILURE!
+runScenario(cucumber.options.TestRunner)  Time elapsed: 18.873 sec  <<< FAILURE!
+java.lang.AssertionError: expected:<16.0> but was:<4.0>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:555)
+	at org.junit.Assert.assertEquals(Assert.java:685)
+	at stepDefinations.SDplaceOrderofBroker1.calculate_fees_for_diffrent_broker(SDplaceOrderofBroker1.java:310)
+	at ?.Check fees "4" for diffrent broker(file:///C:/Users/Dell/eclipse_csk/CSXautomation2Optimision/src/test/java/features/ETHINR.feature:116)
 
-runScenario(cucumber.options.TestRunner)  Time elapsed: 20.823 sec  <<< FAILURE!
-org.junit.ComparisonFailure: expected:<1[.4700000062584877]> but was:<1[2.9]>
-	at org.junit.Assert.assertEquals(Assert.java:117)
-	at org.junit.Assert.assertEquals(Assert.java:146)
-	at stepDefinations.SDplaceOrderofBroker1.calculate_fees_for_diffrent_broker(SDplaceOrderofBroker1.java:266)
-	at ?.Check fees "12.9" for diffrent broker(file:///C:/Users/Dell/eclipse_csk/CSXautomation2Optimision/src/test/java/ETHfeature/ETHINRdiffBrokerFunds2.feature:86)
+runScenario(cucumber.options.TestRunner)  Time elapsed: 19.238 sec  <<< FAILURE!
+java.lang.AssertionError: expected:<5011.5> but was:<2.0>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:555)
+	at org.junit.Assert.assertEquals(Assert.java:685)
+	at stepDefinations.SDplaceOrderofBroker1.calculate_fees_for_diffrent_broker(SDplaceOrderofBroker1.java:310)
+	at ?.Check fees "2" for diffrent broker(file:///C:/Users/Dell/eclipse_csk/CSXautomation2Optimision/src/test/java/features/ETHINR.feature:159)
 
-runScenario(cucumber.options.TestRunner)  Time elapsed: 20.271 sec  <<< FAILURE!
-org.junit.ComparisonFailure: expected:<2[.93999999761581]4> but was:<2[5.]4>
-	at org.junit.Assert.assertEquals(Assert.java:117)
-	at org.junit.Assert.assertEquals(Assert.java:146)
-	at stepDefinations.SDplaceOrderofBroker1.calculate_fees_for_diffrent_broker(SDplaceOrderofBroker1.java:266)
-	at ?.Check fees "25.4" for diffrent broker(file:///C:/Users/Dell/eclipse_csk/CSXautomation2Optimision/src/test/java/ETHfeature/ETHINRdiffBrokerFunds2.feature:170)
+runScenario(cucumber.options.TestRunner)  Time elapsed: 27.384 sec  <<< FAILURE!
+java.lang.AssertionError: expected:<10007.0> but was:<0.0>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:555)
+	at org.junit.Assert.assertEquals(Assert.java:685)
+	at stepDefinations.SDplaceOrderofBroker1.calculate_fees_for_diffrent_broker(SDplaceOrderofBroker1.java:310)
+	at ?.Check fees "0.0" for diffrent broker(file:///C:/Users/Dell/eclipse_csk/CSXautomation2Optimision/src/test/java/features/ETHINR.feature:202)
 
-runScenario(cucumber.options.TestRunner)  Time elapsed: 12.968 sec  <<< FAILURE!
-org.junit.ComparisonFailure: expected:<[2.939999997615814]> but was:<[3.0]>
-	at org.junit.Assert.assertEquals(Assert.java:117)
-	at org.junit.Assert.assertEquals(Assert.java:146)
-	at stepDefinations.SDplaceOrderofBroker1.calculate_fees_for_same_broker(SDplaceOrderofBroker1.java:221)
-	at ?.Check fees "3.0" for same broker(file:///C:/Users/Dell/eclipse_csk/CSXautomation2Optimision/src/test/java/ETHfeature/ETHINRsameBrokerFunds.feature:31)
+runScenario(cucumber.options.TestRunner)  Time elapsed: 23.279 sec  <<< FAILURE!
+java.lang.AssertionError: expected:<-9946.459999998566> but was:<4.0>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:555)
+	at org.junit.Assert.assertEquals(Assert.java:685)
+	at stepDefinations.SDplaceOrderofBroker1.calculate_fees_for_diffrent_broker(SDplaceOrderofBroker1.java:316)
+	at ?.Check fees "4" for diffrent broker(file:///C:/Users/Dell/eclipse_csk/CSXautomation2Optimision/src/test/java/features/ETHINR.feature:245)
 
-runScenario(cucumber.options.TestRunner)  Time elapsed: 13.927 sec  <<< FAILURE!
-org.junit.ComparisonFailure: expected:<1.[469999998807907]> but was:<1.[5]>
-	at org.junit.Assert.assertEquals(Assert.java:117)
-	at org.junit.Assert.assertEquals(Assert.java:146)
-	at stepDefinations.SDplaceOrderofBroker1.calculate_fees_for_same_broker(SDplaceOrderofBroker1.java:221)
-	at ?.Check fees "1.5" for same broker(file:///C:/Users/Dell/eclipse_csk/CSXautomation2Optimision/src/test/java/ETHfeature/ETHINRsameBrokerFunds.feature:61)
+runScenario(cucumber.options.TestRunner)  Time elapsed: 23.125 sec  <<< FAILURE!
+java.lang.AssertionError: expected:<16.0> but was:<4.0>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:555)
+	at org.junit.Assert.assertEquals(Assert.java:685)
+	at stepDefinations.SDplaceOrderofBroker1.calculate_fees_for_diffrent_broker(SDplaceOrderofBroker1.java:310)
+	at ?.Check fees "4" for diffrent broker(file:///C:/Users/Dell/eclipse_csk/CSXautomation2Optimision/src/test/java/features/ETHINR.feature:301)
 
-runScenario(cucumber.options.TestRunner)  Time elapsed: 13.222 sec  <<< FAILURE!
-org.junit.ComparisonFailure: expected:<[2.939999997615814]> but was:<[3.0]>
-	at org.junit.Assert.assertEquals(Assert.java:117)
-	at org.junit.Assert.assertEquals(Assert.java:146)
-	at stepDefinations.SDplaceOrderofBroker1.calculate_fees_for_same_broker(SDplaceOrderofBroker1.java:221)
-	at ?.Check fees "3.0" for same broker(file:///C:/Users/Dell/eclipse_csk/CSXautomation2Optimision/src/test/java/ETHfeature/ETHINRsameBrokerFunds.feature:152)
+runScenario(cucumber.options.TestRunner)  Time elapsed: 17.566 sec  <<< FAILURE!
+java.lang.AssertionError: expected:<16.0> but was:<4.0>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:555)
+	at org.junit.Assert.assertEquals(Assert.java:685)
+	at stepDefinations.SDplaceOrderofBroker1.calculate_fees_for_diffrent_broker(SDplaceOrderofBroker1.java:310)
+	at ?.Check fees "4" for diffrent broker(file:///C:/Users/Dell/eclipse_csk/CSXautomation2Optimision/src/test/java/features/ETHINR.feature:350)
 
-runScenario(cucumber.options.TestRunner)  Time elapsed: 13.914 sec  <<< FAILURE!
-org.junit.ComparisonFailure: expected:<[3].0> but was:<[1].0>
+runScenario(cucumber.options.TestRunner)  Time elapsed: 37.856 sec  <<< FAILURE!
+java.lang.AssertionError: expected:<8.0> but was:<2.0>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:555)
+	at org.junit.Assert.assertEquals(Assert.java:685)
+	at stepDefinations.SDplaceOrderofBroker1.calculate_fees_for_diffrent_broker(SDplaceOrderofBroker1.java:310)
+	at ?.Check fees "2" for diffrent broker(file:///C:/Users/Dell/eclipse_csk/CSXautomation2Optimision/src/test/java/features/ETHINR.feature:399)
+
+runScenario(cucumber.options.TestRunner)  Time elapsed: 25.807 sec  <<< FAILURE!
+java.lang.AssertionError: expected:<8.0> but was:<2.0>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:555)
+	at org.junit.Assert.assertEquals(Assert.java:685)
+	at stepDefinations.SDplaceOrderofBroker1.calculate_fees_for_diffrent_broker(SDplaceOrderofBroker1.java:310)
+	at ?.Check fees "2" for diffrent broker(file:///C:/Users/Dell/eclipse_csk/CSXautomation2Optimision/src/test/java/features/ETHINR.feature:448)
+
+runScenario(cucumber.options.TestRunner)  Time elapsed: 14.788 sec  <<< FAILURE!
+java.lang.AssertionError: expected:<16.0> but was:<4.0>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:555)
+	at org.junit.Assert.assertEquals(Assert.java:685)
+	at stepDefinations.SDplaceOrderofBroker1.calculate_fees_for_diffrent_broker(SDplaceOrderofBroker1.java:310)
+	at ?.Check fees "4" for diffrent broker(file:///C:/Users/Dell/eclipse_csk/CSXautomation2Optimision/src/test/java/features/ETHINR.feature:498)
+
+runScenario(cucumber.options.TestRunner)  Time elapsed: 18.024 sec  <<< FAILURE!
+java.lang.AssertionError: expected:<1.5999999940395355> but was:<4.0>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:555)
+	at org.junit.Assert.assertEquals(Assert.java:685)
+	at stepDefinations.SDplaceOrderofBroker1.calculate_fees_for_diffrent_broker(SDplaceOrderofBroker1.java:316)
+	at ?.Check fees "4" for diffrent broker(file:///C:/Users/Dell/eclipse_csk/CSXautomation2Optimision/src/test/java/features/ETHINR.feature:546)
+
+runScenario(cucumber.options.TestRunner)  Time elapsed: 28.561 sec  <<< FAILURE!
+java.lang.AssertionError: expected:<0.7999999970197678> but was:<2.0>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:555)
+	at org.junit.Assert.assertEquals(Assert.java:685)
+	at stepDefinations.SDplaceOrderofBroker1.calculate_fees_for_diffrent_broker(SDplaceOrderofBroker1.java:316)
+	at ?.Check fees "2" for diffrent broker(file:///C:/Users/Dell/eclipse_csk/CSXautomation2Optimision/src/test/java/features/ETHINR.feature:594)
+
+runScenario(cucumber.options.TestRunner)  Time elapsed: 18.068 sec  <<< FAILURE!
+java.lang.AssertionError: expected:<-4502.3499999940395> but was:<2.0>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:555)
+	at org.junit.Assert.assertEquals(Assert.java:685)
+	at stepDefinations.SDplaceOrderofBroker1.calculate_fees_for_diffrent_broker(SDplaceOrderofBroker1.java:316)
+	at ?.Check fees "2" for diffrent broker(file:///C:/Users/Dell/eclipse_csk/CSXautomation2Optimision/src/test/java/features/ETHINR.feature:642)
+
+runScenario(cucumber.options.TestRunner)  Time elapsed: 19.154 sec  <<< FAILURE!
+org.junit.ComparisonFailure: expected:<[5005.0]> but was:<[1.5]>
 	at org.junit.Assert.assertEquals(Assert.java:117)
 	at org.junit.Assert.assertEquals(Assert.java:146)
-	at stepDefinations.SDplaceOrderofBroker1.calculate_fees_for_same_broker(SDplaceOrderofBroker1.java:221)
-	at ?.Check fees "1.0" for same broker(file:///C:/Users/Dell/eclipse_csk/CSXautomation2Optimision/src/test/java/ETHfeature/ETHINRsameBrokerFunds.feature:189)
+	at stepDefinations.SDplaceOrderofBroker1.calculate_fees_for_same_broker(SDplaceOrderofBroker1.java:232)
+	at ?.Check fees "1.5" for same broker(file:///C:/Users/Dell/eclipse_csk/CSXautomation2Optimision/src/test/java/features/ETHINR.feature:710)
+
+runScenario(cucumber.options.TestRunner)  Time elapsed: 21.741 sec  <<< FAILURE!
+java.lang.AssertionError: expected:<9.000082619605245E7> but was:<9.000082669605245E7>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:555)
+	at org.junit.Assert.assertEquals(Assert.java:685)
+	at stepDefinations.SDplaceOrderofBroker1.calculate_fees_for_same_broker(SDplaceOrderofBroker1.java:242)
+	at ?.Check fees "0.0" for same broker(file:///C:/Users/Dell/eclipse_csk/CSXautomation2Optimision/src/test/java/features/ETHINR.feature:740)
+
+runScenario(cucumber.options.TestRunner)  Time elapsed: 10.333 sec  <<< FAILURE!
+java.lang.AssertionError: expected:<9.000082669605245E7> but was:<9.000082169605245E7>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:555)
+	at org.junit.Assert.assertEquals(Assert.java:685)
+	at stepDefinations.SDplaceOrderofBroker1.calculate_fees_for_same_broker(SDplaceOrderofBroker1.java:246)
+	at ?.Check fees "0.0" for same broker(file:///C:/Users/Dell/eclipse_csk/CSXautomation2Optimision/src/test/java/features/ETHINR.feature:1067)
+
+runScenario(cucumber.options.TestRunner)  Time elapsed: 5.368 sec  <<< FAILURE!
+org.junit.ComparisonFailure: expected:<[PARTIALLY_FULFILLED]> but was:<[OPEN]>
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at stepDefinations.SDplaceOrderofBroker1.verify_key_of_response(SDplaceOrderofBroker1.java:138)
+	at ?.Verify key "data.status" of response "OPEN"(file:///C:/Users/Dell/eclipse_csk/CSXautomation2Optimision/src/test/java/features/ETHINR.feature:1091)
+
+runScenario(cucumber.options.TestRunner)  Time elapsed: 8.378 sec  <<< FAILURE!
+java.lang.AssertionError: expected:<9.000082669605245E7> but was:<9.000083369605245E7>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:555)
+	at org.junit.Assert.assertEquals(Assert.java:685)
+	at stepDefinations.SDplaceOrderofBroker1.calculate_fees_for_same_broker(SDplaceOrderofBroker1.java:242)
+	at ?.Check fees "0.0" for same broker(file:///C:/Users/Dell/eclipse_csk/CSXautomation2Optimision/src/test/java/features/ETHINR.feature:1182)
 

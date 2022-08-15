@@ -64,8 +64,8 @@ public class SDplaceOrderofBroker1 extends Utils {
 
 		placeOrderBody = "{\r\n" + "    \"type\": \"" + orderType + "\",\r\n" + "    \"side\": \"" + orderSide
 				+ "\",\r\n" + "    \"instrument\": \"" + instruments + "\",\r\n" + "    \"quantityType\": \""
-				+ quantityType + "\",\r\n" + "    \"quantity\": " + quantity + ",\r\n" + "  \"limitPrice\": "
-				+ limitPrice + ",    \r\n" + "  \"username\": \"" + username + "\"\r\n" + "}";
+				+ quantityType + "\",\r\n" + "    \"quantity\": " + quantity + ",\r\n" + "  \"limitPrice\":\""
+				+ limitPrice + "\",    \r\n" + "  \"username\": \"" + username + "\"\r\n" + "}";
 
 		res2 = given().relaxedHTTPSValidation().spec(requestSpecificationOfBroker1(broker)).body(placeOrderBody);
 		res1 = given().relaxedHTTPSValidation().spec(requestSpecificationOfBroker1(broker));
@@ -148,18 +148,18 @@ public class SDplaceOrderofBroker1 extends Utils {
 		ENUM = resourceAPI.getResource();
 		// System.out.println(resourceAPI.getResource());
 		response = res1.when().get(ENUM + order_id);
-		String actualName = getJsonPath(response, "data.orderID");
+		String actualName = getJsonPath(response, "data.orderId");
 		assertEquals(actualName, order_id);
 		System.out.println(response.asString());
 	}
 
 	@Given("Update an order for broker {string} of  instrument {string} quantityType {string} quantity {string} limitPrice {string} username {string} orderType {string}")
 	public void update_an_order_of_instrument_quantity_type_quantity_limit_price_username(String broker,
-			String instruments, String quantityType, String quantity, String limit_Price, String username,
+			String instruments, String quantityType, String quantity, String limitprice, String username,
 			String orderType) throws IOException {
 		String updateOrder = "{\r\n" + "    \"type\": \"" + orderType + "\",\r\n" + "    \"instrument\": \""
 				+ instruments + "\",\r\n" + "    \"quantityType\": \"" + quantityType + "\",\r\n" + "    \"quantity\": "
-				+ quantity + ",\r\n" + "  \"limit_Price\": " + limit_Price + ",    \r\n" + "  \"username\": \""
+				+ quantity + ",\r\n" + "  \"limitprice\": " + limitprice + ",    \r\n" + "  \"username\": \""
 				+ username + "\"\r\n" + "}";
 		res3 = given().relaxedHTTPSValidation().spec(requestSpecificationOfBroker1(broker)).body(updateOrder);
 
@@ -217,19 +217,35 @@ public class SDplaceOrderofBroker1 extends Utils {
 		System.out.println("diffrence inr before matching = " + (s1b1inr - s2b1inr));
 		System.out.println("diffrence btc before matching = " + (s1b1btc - s2b1btc));
 
-		// System.out.println(s1b1btc - s3b1btc);
-		if (s1b1btc - s3b1btc > 0.00000001) {
+		if ((s1b1btc - s3b1btc) < 0.00001) {
+			if ((s1b1btc - s3b1btc) > -0.00001) {
+				if ((DEE - FEE) < 0.001) {
+					if ((DEE - FEE) > -0.001) {
+						System.out.println("Pass because diffrence in btc  = " + (s1b1btc - s3b1btc));
+						System.out.println(
+								"Pass because diffrence in inr  = " + (s1b1inr - s3b1inr) + "  which is equal to fee");
+						System.out
+								.println("And Pass because diffrence in Fee = " + (DEE - FEE) + "  which is very less");
 
-			assertEquals(stringFee, expectedfee);
+					} else {
+						System.out.println("And Fail because diffrence in Fee is= " + (DEE - FEE));
+						assertEquals(stringFee, expectedfee);
+
+					}
+
+				} else {
+					System.out.println("And Fail because diffrence in Fee is= " + (DEE - FEE));
+					assertEquals(stringFee, expectedfee);
+				}
+			} else {
+				System.out.println("Error Fail because diffrence in btc is = " + (s1b1btc - s3b1btc));
+				assertEquals(s1b1btc, s3b1btc, 0.0);
+			}
 		} else {
-			System.out.println("Pass because diffrence = " + (s1b1btc - s3b1btc));
+			System.out.println("Error Fail because diffrence in btc is = " + (s1b1btc - s3b1btc));
+			assertEquals(s1b1btc, s3b1btc, 0.0);
 		}
 
-		if (DEE - FEE > 0.001) {
-			assertEquals(stringFee, expectedfee);
-		} else {
-			System.out.println("Pass because diffrence = " + (DEE - FEE));
-		}
 
 	}
 
@@ -276,17 +292,42 @@ public class SDplaceOrderofBroker1 extends Utils {
 		String deductionBtcOfBroker2 = String.valueOf(Deduction_of_BTC_to_broker2);
 
 		double DEE = Double.parseDouble(expectedfee);
-		if (DEE - Fee_for_diffrent_broker > 0.001) {
-			assertEquals(stringFee, expectedfee);
+
+		if ((Addition_of_BTC_to_broker1 - Deduction_of_BTC_to_broker2) < 0.00001) {
+			if ((Addition_of_BTC_to_broker1 - Deduction_of_BTC_to_broker2) > -0.00001) {
+				if ((DEE - Fee_for_diffrent_broker) < 0.001) {
+					if ((DEE - Fee_for_diffrent_broker) > -0.001) {
+						System.out.println("Pass because diffrence in btc  = "
+								+ (Addition_of_BTC_to_broker1 - Deduction_of_BTC_to_broker2));
+						System.out.println("Pass because diffrence in inr  = "
+								+ (Deduction_of_INR_from_broker1 - Addition_of_INR_in_broker2)
+								+ "  which is equal to fee");
+						System.out.println("And Pass because diffrence in Fee = " + (DEE - Fee_for_diffrent_broker)
+								+ "  which is very less");
+
+					} else {
+						System.out.println("And Fail because diffrence in Fee is= " + (DEE - Fee_for_diffrent_broker));
+						assertEquals(Fee_for_diffrent_broker, DEE,0.0);
+
+					}
+
+				} else {
+					System.out.println("And Fail because diffrence in Fee is= " + (DEE - Fee_for_diffrent_broker));
+					assertEquals(Fee_for_diffrent_broker, DEE,0.0);
+				}
+			} else {
+				System.out.println("Error Fail because diffrence in btc is = "
+						+ (Addition_of_BTC_to_broker1 - Deduction_of_BTC_to_broker2));
+				assertEquals(Addition_of_BTC_to_broker1, Deduction_of_BTC_to_broker2, 0.0);
+			}
 		} else {
-			System.out.println("Pass because diffrence in inr is = " + (DEE - Fee_for_diffrent_broker));
+			System.out.println("Error Fail because diffrence in btc is = "
+					+ (Addition_of_BTC_to_broker1 - Deduction_of_BTC_to_broker2));
+			assertEquals(Addition_of_BTC_to_broker1, Deduction_of_BTC_to_broker2, 0.0);
 		}
-		if (Addition_of_BTC_to_broker1 - Deduction_of_BTC_to_broker2 > 0.00000001) {
-			assertEquals(addBtcOfBroker1, deductionBtcOfBroker2);
-		} else {
-			System.out.println(
-					"Pass because diffrence in btc is = " + (Addition_of_BTC_to_broker1 - Deduction_of_BTC_to_broker2));
-		}
+
+	
+
 
 	}
 
